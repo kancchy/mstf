@@ -8,11 +8,23 @@
 import UIKit
 
 class MatchController: UIViewController {
+
+    var argString = "";
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        player1.text = argString
     }
 
-
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var player1: UILabel!
+    
+    @IBOutlet weak var player2: UILabel!
+    
+    @IBOutlet weak var player3: UILabel!
+    
+    @IBOutlet weak var player4: UILabel!
+    
 }
