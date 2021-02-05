@@ -48,6 +48,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="player3:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="fZP-rS-I3b"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oXt-Sc-ooQ">
                                 <rect key="frame" x="231" y="434" width="97" height="34"/>
@@ -87,7 +90,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="かんだ"/>
                                 <connections>
-                                    <segue destination="Zh0-wf-hWs" kind="show" id="Nlf-s3-TkF"/>
+                                    <segue destination="Zh0-wf-hWs" kind="show" identifier="matchKanda" id="Nlf-s3-TkF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,6 +102,8 @@
                         <outlet property="makeMatch" destination="bdd-mj-dqv" id="F9H-gk-3YZ"/>
                         <outlet property="player1" destination="IHx-3z-QXz" id="3dH-fX-BPm"/>
                         <outlet property="player2" destination="6qA-1O-BAg" id="YQ0-kC-hL4"/>
+                        <outlet property="player3" destination="Ybs-XR-kHb" id="H4X-nb-o9K"/>
+                        <outlet property="player4" destination="oXt-Sc-ooQ" id="jK2-pa-5sB"/>
                         <outlet property="startDate" destination="eYu-9y-hj3" id="MIw-n6-dSM"/>
                     </connections>
                 </viewController>

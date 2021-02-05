@@ -17,8 +17,9 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var player1: UITextField!
-    
     @IBOutlet weak var player2: UITextField!
+    @IBOutlet weak var player3: UITextField!
+    @IBOutlet weak var player4: UITextField!
     
     @IBOutlet weak var startDate: UIDatePicker!
     
@@ -37,7 +38,23 @@ class ViewController: UIViewController {
             let strDate = dateformatter.string(from: startDate.date)
             print(strDate)
             
+        } else if segue.identifier == "matchKanda" {
+
+            // 遷移先ViewCntrollerの取得
+            let nextView = segue.destination as! MatchKandaController;
+            // 値の設定
+            nextView.player1Name = player1.text!
+            nextView.player2Name = player2.text!
+            nextView.player3Name = player3.text!
+            nextView.player4Name = player4.text!
+            
+            let dateformatter = DateFormatter()
+            dateformatter.dateFormat = "yyyy/MM/dd"
+            nextView.startDate = dateformatter.string(from: startDate.date);
+            
         }
+        
+        
     }
 }
 
