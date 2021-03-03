@@ -9,6 +9,17 @@ import UIKit
 
 class MatchYamaguchiController: UIViewController {
 
+    @IBOutlet weak var player1Name: UILabel!
+    @IBOutlet weak var player2Name: UILabel!
+    @IBOutlet weak var player3Name: UILabel!
+    @IBOutlet weak var player4Name: UILabel!
+    @IBOutlet weak var clearBtn: UIButton!
+    @IBOutlet weak var faulttn: UIButton!
+    @IBOutlet weak var point1Btn: UIButton!
+    @IBOutlet weak var point2Btn: UIButton!
+    @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var team1Name: UILabel!
+    @IBOutlet weak var team2Name: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
