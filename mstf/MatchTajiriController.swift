@@ -9,10 +9,23 @@ import UIKit
 
 class MatchTajiriController: UIViewController {
 
+    @IBOutlet weak var team1Name: UILabel!
+    @IBOutlet weak var team2Name: UILabel!
+    @IBOutlet weak var player1Name: UILabel!
+    @IBOutlet weak var player2Name: UILabel!
+    @IBOutlet weak var point1Btn: UIButton!
+    @IBOutlet weak var point2Btn: UIButton!
+    @IBOutlet weak var fault1Btn: UIButton!
+    @IBOutlet weak var fault2Btn: UIButton!
+    @IBOutlet weak var clearBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.point1Btn.backgroundColor = UIColor.yellow
+        self.point2Btn.backgroundColor = UIColor.yellow
+        //角丸の程度を指定
+        self.point1Btn.layer.cornerRadius = 20.0
     }
     
 
