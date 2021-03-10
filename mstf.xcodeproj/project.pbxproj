@@ -12,11 +12,11 @@
 		54C30B8025CABEA900F61D37 /* MatchKandaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C30B7F25CABEA900F61D37 /* MatchKandaController.swift */; };
 		54C30B8525CABEDB00F61D37 /* MatchKanda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C30B8425CABEDB00F61D37 /* MatchKanda.storyboard */; };
 		54DB7C6D25E6608A001330CE /* SeguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DB7C6C25E6608A001330CE /* SeguePresenter.swift */; };
+		54DB7C8A25F8D715001330CE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DB7C8925F8D715001330CE /* Game.swift */; };
+		54DB7C8F25F8D817001330CE /* TieBreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DB7C8E25F8D817001330CE /* TieBreak.swift */; };
 		7520138B25F8D5F60027B482 /* GamePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520138A25F8D5F60027B482 /* GamePoint.swift */; };
 		7520139225F8D6EE0027B482 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520139125F8D6EE0027B482 /* Constant.swift */; };
 		7520139A25F8D9B30027B482 /* GamePointForTieBreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520139925F8D9B30027B482 /* GamePointForTieBreak.swift */; };
-		54DB7C8A25F8D715001330CE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DB7C8925F8D715001330CE /* Game.swift */; };
-		54DB7C8F25F8D817001330CE /* TieBreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DB7C8E25F8D817001330CE /* TieBreak.swift */; };
 		75882E6825EFA38C00BE4DAC /* MatchYamaguchi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75882E6725EFA38C00BE4DAC /* MatchYamaguchi.storyboard */; };
 		75882E6D25EFA3CC00BE4DAC /* MatchYamaguchiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75882E6C25EFA3CC00BE4DAC /* MatchYamaguchiController.swift */; };
 		AE66A7C025B83C11002891F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66A7BF25B83C11002891F4 /* AppDelegate.swift */; };
@@ -31,6 +31,11 @@
 		AEA3D20325F8CE7200E00931 /* CurrentGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D20225F8CE7200E00931 /* CurrentGame.swift */; };
 		AEA3D20B25F8D23000E00931 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D20A25F8D23000E00931 /* Score.swift */; };
 		AEA3D21025F8D23E00E00931 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D20F25F8D23E00E00931 /* Team.swift */; };
+		AEA3D24E25F8E9CC00E00931 /* CoinFlippingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D24B25F8E9CC00E00931 /* CoinFlippingResult.swift */; };
+		AEA3D24F25F8E9CC00E00931 /* CoinFlippingSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D24C25F8E9CC00E00931 /* CoinFlippingSelect.swift */; };
+		AEA3D25025F8E9CC00E00931 /* CoinFlipping.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D24D25F8E9CC00E00931 /* CoinFlipping.swift */; };
+		AEA3D25525F8E9E100E00931 /* GameInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D25425F8E9E100E00931 /* GameInterface.swift */; };
+		AEA3D25A25F8E9F800E00931 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D25925F8E9F800E00931 /* Set.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +61,11 @@
 		54C30B7F25CABEA900F61D37 /* MatchKandaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchKandaController.swift; sourceTree = "<group>"; };
 		54C30B8425CABEDB00F61D37 /* MatchKanda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchKanda.storyboard; sourceTree = "<group>"; };
 		54DB7C6C25E6608A001330CE /* SeguePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePresenter.swift; sourceTree = "<group>"; };
+		54DB7C8925F8D715001330CE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		54DB7C8E25F8D817001330CE /* TieBreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TieBreak.swift; sourceTree = "<group>"; };
 		7520138A25F8D5F60027B482 /* GamePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePoint.swift; sourceTree = "<group>"; };
 		7520139125F8D6EE0027B482 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7520139925F8D9B30027B482 /* GamePointForTieBreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePointForTieBreak.swift; sourceTree = "<group>"; };
-		54DB7C8925F8D715001330CE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		54DB7C8E25F8D817001330CE /* TieBreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TieBreak.swift; sourceTree = "<group>"; };
 		75882E6725EFA38C00BE4DAC /* MatchYamaguchi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchYamaguchi.storyboard; sourceTree = "<group>"; };
 		75882E6C25EFA3CC00BE4DAC /* MatchYamaguchiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchYamaguchiController.swift; sourceTree = "<group>"; };
 		AE66A7BC25B83C11002891F4 /* mstf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mstf.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +86,11 @@
 		AEA3D20225F8CE7200E00931 /* CurrentGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGame.swift; sourceTree = "<group>"; };
 		AEA3D20A25F8D23000E00931 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		AEA3D20F25F8D23E00E00931 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		AEA3D24B25F8E9CC00E00931 /* CoinFlippingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinFlippingResult.swift; sourceTree = "<group>"; };
+		AEA3D24C25F8E9CC00E00931 /* CoinFlippingSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinFlippingSelect.swift; sourceTree = "<group>"; };
+		AEA3D24D25F8E9CC00E00931 /* CoinFlipping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinFlipping.swift; sourceTree = "<group>"; };
+		AEA3D25425F8E9E100E00931 /* GameInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInterface.swift; sourceTree = "<group>"; };
+		AEA3D25925F8E9F800E00931 /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +207,11 @@
 		AEA3D20125F8CD9D00E00931 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				AEA3D25925F8E9F800E00931 /* Set.swift */,
+				AEA3D25425F8E9E100E00931 /* GameInterface.swift */,
+				AEA3D24D25F8E9CC00E00931 /* CoinFlipping.swift */,
+				AEA3D24B25F8E9CC00E00931 /* CoinFlippingResult.swift */,
+				AEA3D24C25F8E9CC00E00931 /* CoinFlippingSelect.swift */,
 				AEA3D20225F8CE7200E00931 /* CurrentGame.swift */,
 				AEA3D20A25F8D23000E00931 /* Score.swift */,
 				AEA3D20F25F8D23E00E00931 /* Team.swift */,
@@ -344,9 +359,13 @@
 				AE66A7C425B83C11002891F4 /* ViewController.swift in Sources */,
 				AEA3D20325F8CE7200E00931 /* CurrentGame.swift in Sources */,
 				AE66A7F325B84490002891F4 /* MatchController.swift in Sources */,
+				AEA3D25025F8E9CC00E00931 /* CoinFlipping.swift in Sources */,
+				AEA3D24E25F8E9CC00E00931 /* CoinFlippingResult.swift in Sources */,
 				75882E6D25EFA3CC00BE4DAC /* MatchYamaguchiController.swift in Sources */,
 				AEA3D20B25F8D23000E00931 /* Score.swift in Sources */,
 				54DB7C8F25F8D817001330CE /* TieBreak.swift in Sources */,
+				AEA3D24F25F8E9CC00E00931 /* CoinFlippingSelect.swift in Sources */,
+				AEA3D25525F8E9E100E00931 /* GameInterface.swift in Sources */,
 				AE66A7C025B83C11002891F4 /* AppDelegate.swift in Sources */,
 				7520138B25F8D5F60027B482 /* GamePoint.swift in Sources */,
 				54C30B8025CABEA900F61D37 /* MatchKandaController.swift in Sources */,
@@ -354,6 +373,7 @@
 				54C30B7B25CABCE700F61D37 /* MatchTajiriController.swift in Sources */,
 				7520139A25F8D9B30027B482 /* GamePointForTieBreak.swift in Sources */,
 				7520139225F8D6EE0027B482 /* Constant.swift in Sources */,
+				AEA3D25A25F8E9F800E00931 /* Set.swift in Sources */,
 				AEA3D21025F8D23E00E00931 /* Team.swift in Sources */,
 				54DB7C6D25E6608A001330CE /* SeguePresenter.swift in Sources */,
 				AE66A7C225B83C11002891F4 /* SceneDelegate.swift in Sources */,
