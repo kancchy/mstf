@@ -41,10 +41,10 @@ class SeguePresenter:DelegateProtocol{
             // 遷移先ViewCntrollerの取得
             let nextView = segue.destination as! MatchKandaController;
             // 値の設定
-            nextView.player1Name = (delegete?.player1.text!)!
-            nextView.player2Name = (delegete?.player2.text!)!
-            nextView.player3Name = (delegete?.player3.text!)!
-            nextView.player4Name = (delegete?.player4.text!)!
+            nextView.receivedPlayer1Name = (delegete?.player1.text!)!
+            nextView.receivedPlayer2Name = (delegete?.player2.text!)!
+            nextView.receivedPlayer3Name = (delegete?.player3.text!)!
+            nextView.receivedPlayer4Name = (delegete?.player4.text!)!
             
             let dateformatter = DateFormatter()
             dateformatter.dateFormat = "yyyy/MM/dd"

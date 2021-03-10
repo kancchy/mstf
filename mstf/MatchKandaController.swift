@@ -9,45 +9,75 @@ import UIKit
 
 class MatchKandaController: UIViewController {
 
-    var player1Name = "";
-    var player2Name = "";
-    var player3Name = "";
-    var player4Name = "";
+    var receivedPlayer1Name = "";
+    var receivedPlayer2Name = "";
+    var receivedPlayer3Name = "";
+    var receivedPlayer4Name = "";
     var startDate = "";
     
     var player1sPoint = "";
     override func viewDidLoad() {
         super.viewDidLoad()
-        player1.text = player1Name;
-        player2.text = player2Name;
-        player3.text = player3Name;
-        player4.text = player4Name;
+        player1Name.text = receivedPlayer1Name;
+        player2Name.text = receivedPlayer2Name;
+        player3Name.text = receivedPlayer3Name;
+        player4Name.text = receivedPlayer4Name;
         print("startDate:" + startDate)
     }
     
-    @IBOutlet weak var player1: UILabel!
-    @IBOutlet weak var player2: UILabel!
-    @IBOutlet weak var player3: UILabel!
-    @IBOutlet weak var player4: UILabel!
+    @IBOutlet weak var player1Name: UILabel!
+    @IBOutlet weak var player2Name: UILabel!
+    @IBOutlet weak var player3Name: UILabel!
+    @IBOutlet weak var player4Name: UILabel!
+    
     @IBOutlet weak var leftGameNum: UILabel!
     @IBOutlet weak var rightGameNum: UILabel!
     @IBOutlet weak var leftSetNum: UILabel!
     @IBOutlet weak var rightSetNum: UILabel!
     
+    @IBOutlet weak var leftGameLine: UIStackView!
+    @IBOutlet weak var rightGameLine: UIStackView!
+    /// 作成したViewのカウンター
+    var count:Int = 0
+    
+    
     @IBAction func tapLeftView(_ sender: Any) {
         print("tap Left View")
+        // stackViewにnewViewを追加する
+        leftGameLine.addArrangedSubview(createStackViewCell())
     }
     @IBAction func tapRightView(_ sender: Any) {
         print("tap Right View")
+        leftGameLine.addArrangedSubview(createStackViewCell())
     }
-    /*
-    // MARK: - Navigation
+    
+    @IBAction func pushFoultBtn(_ sender: Any) {
+        print("tap Btn")
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // stackViewにnewViewを追加する
+        
+        leftGameLine.addArrangedSubview(createStackViewCell())
     }
-    */
+    func createStackViewCell() -> UIView {
+        // 新規追加するViewを作成
+        let newView = UIView()
+        let label = UILabel()
+        newView.addSubview(label);
+        // 背景を緑に設定
+        newView.backgroundColor = UIColor.green
+        // 枠線を設定
+        newView.layer.borderColor = UIColor.black.cgColor
+        newView.layer.borderWidth = 1.0
+        // 追加されたViewがわかりやすいように、ナンバリング
+        label.text = "\(count)"
+        label.sizeToFit()
+        label.textColor = UIColor.black
+        // ナンバリング用のカウンタをインクリメント
+        count += 1
+        // 新規Viewに height=100 の制約を追加 ←【超重要】
+        newView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        newView.translatesAutoresizingMaskIntoConstraints = false
+        return newView;
+    }
 
 }
