@@ -12,6 +12,8 @@
 		54C30B8025CABEA900F61D37 /* MatchKandaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C30B7F25CABEA900F61D37 /* MatchKandaController.swift */; };
 		54C30B8525CABEDB00F61D37 /* MatchKanda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C30B8425CABEDB00F61D37 /* MatchKanda.storyboard */; };
 		54DB7C6D25E6608A001330CE /* SeguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DB7C6C25E6608A001330CE /* SeguePresenter.swift */; };
+		75882E6825EFA38C00BE4DAC /* MatchYamaguchi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75882E6725EFA38C00BE4DAC /* MatchYamaguchi.storyboard */; };
+		75882E6D25EFA3CC00BE4DAC /* MatchYamaguchiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75882E6C25EFA3CC00BE4DAC /* MatchYamaguchiController.swift */; };
 		AE66A7C025B83C11002891F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66A7BF25B83C11002891F4 /* AppDelegate.swift */; };
 		AE66A7C225B83C11002891F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66A7C125B83C11002891F4 /* SceneDelegate.swift */; };
 		AE66A7C425B83C11002891F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66A7C325B83C11002891F4 /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		54C30B7F25CABEA900F61D37 /* MatchKandaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchKandaController.swift; sourceTree = "<group>"; };
 		54C30B8425CABEDB00F61D37 /* MatchKanda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchKanda.storyboard; sourceTree = "<group>"; };
 		54DB7C6C25E6608A001330CE /* SeguePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePresenter.swift; sourceTree = "<group>"; };
+		75882E6725EFA38C00BE4DAC /* MatchYamaguchi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchYamaguchi.storyboard; sourceTree = "<group>"; };
+		75882E6C25EFA3CC00BE4DAC /* MatchYamaguchiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchYamaguchiController.swift; sourceTree = "<group>"; };
 		AE66A7BC25B83C11002891F4 /* mstf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mstf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE66A7BF25B83C11002891F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE66A7C125B83C11002891F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 				AE66A7C825B83C12002891F4 /* Assets.xcassets */,
 				AE66A7CA25B83C12002891F4 /* LaunchScreen.storyboard */,
 				AE66A7CD25B83C12002891F4 /* Info.plist */,
+				75882E6725EFA38C00BE4DAC /* MatchYamaguchi.storyboard */,
 			);
 			path = mstf;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				AE66A7C325B83C11002891F4 /* ViewController.swift */,
 				54C30B7A25CABCE700F61D37 /* MatchTajiriController.swift */,
 				54C30B7F25CABEA900F61D37 /* MatchKandaController.swift */,
+				75882E6C25EFA3CC00BE4DAC /* MatchYamaguchiController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -268,6 +274,7 @@
 				54C30B8525CABEDB00F61D37 /* MatchKanda.storyboard in Resources */,
 				AE66A7CC25B83C12002891F4 /* LaunchScreen.storyboard in Resources */,
 				54C30B7625CABBC900F61D37 /* MatchTajiri.storyboard in Resources */,
+				75882E6825EFA38C00BE4DAC /* MatchYamaguchi.storyboard in Resources */,
 				AE66A7C925B83C12002891F4 /* Assets.xcassets in Resources */,
 				AE66A7C725B83C11002891F4 /* Main.storyboard in Resources */,
 			);
@@ -296,6 +303,7 @@
 			files = (
 				AE66A7C425B83C11002891F4 /* ViewController.swift in Sources */,
 				AE66A7F325B84490002891F4 /* MatchController.swift in Sources */,
+				75882E6D25EFA3CC00BE4DAC /* MatchYamaguchiController.swift in Sources */,
 				AE66A7C025B83C11002891F4 /* AppDelegate.swift in Sources */,
 				54C30B8025CABEA900F61D37 /* MatchKandaController.swift in Sources */,
 				54C30B7B25CABCE700F61D37 /* MatchTajiriController.swift in Sources */,

@@ -1,31 +1,29 @@
 //
-//  MatchTajiriController.swift
+//  MatchYamaguchiController.swift
 //  mstf
 //
-//  Created by hiroto.tajiri.ts on 2021/02/03.
+//  Created by 山口賢明 on 2021/03/03.
 //
 
 import UIKit
 
-class MatchTajiriController: UIViewController {
+class MatchYamaguchiController: UIViewController {
 
-    @IBOutlet weak var team1Name: UILabel!
-    @IBOutlet weak var team2Name: UILabel!
     @IBOutlet weak var player1Name: UILabel!
     @IBOutlet weak var player2Name: UILabel!
+    @IBOutlet weak var player3Name: UILabel!
+    @IBOutlet weak var player4Name: UILabel!
+    @IBOutlet weak var clearBtn: UIButton!
+    @IBOutlet weak var faulttn: UIButton!
     @IBOutlet weak var point1Btn: UIButton!
     @IBOutlet weak var point2Btn: UIButton!
-    @IBOutlet weak var fault1Btn: UIButton!
-    @IBOutlet weak var fault2Btn: UIButton!
-    @IBOutlet weak var clearBtn: UIButton!
-    
+    @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var team1Name: UILabel!
+    @IBOutlet weak var team2Name: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.point1Btn.backgroundColor = UIColor.yellow
-        self.point2Btn.backgroundColor = UIColor.yellow
-        //角丸の程度を指定
-        self.point1Btn.layer.cornerRadius = 20.0
+        // Do any additional setup after loading the view.
     }
     
 
