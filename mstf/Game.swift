@@ -8,7 +8,7 @@
 import Foundation
 
 class Game{
-    private (set) var gamePoint:String? ;
+    private (set) var gamePoint:[GamePoint]? ;
     private (set) var gamePointCountTeamA:Int? ;
     private (set) var gamePointCountTeamB:Int? ;
     // サーバ/レシーバーにはチーム名が入る

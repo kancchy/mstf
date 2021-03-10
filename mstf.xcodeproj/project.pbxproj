@@ -34,7 +34,7 @@
 		AEA3D24E25F8E9CC00E00931 /* CoinFlippingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D24B25F8E9CC00E00931 /* CoinFlippingResult.swift */; };
 		AEA3D24F25F8E9CC00E00931 /* CoinFlippingSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D24C25F8E9CC00E00931 /* CoinFlippingSelect.swift */; };
 		AEA3D25025F8E9CC00E00931 /* CoinFlipping.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D24D25F8E9CC00E00931 /* CoinFlipping.swift */; };
-		AEA3D25525F8E9E100E00931 /* GameInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D25425F8E9E100E00931 /* GameInterface.swift */; };
+		AEA3D25525F8E9E100E00931 /* MatchInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D25425F8E9E100E00931 /* MatchInterface.swift */; };
 		AEA3D25A25F8E9F800E00931 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3D25925F8E9F800E00931 /* Set.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,7 +89,7 @@
 		AEA3D24B25F8E9CC00E00931 /* CoinFlippingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinFlippingResult.swift; sourceTree = "<group>"; };
 		AEA3D24C25F8E9CC00E00931 /* CoinFlippingSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinFlippingSelect.swift; sourceTree = "<group>"; };
 		AEA3D24D25F8E9CC00E00931 /* CoinFlipping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinFlipping.swift; sourceTree = "<group>"; };
-		AEA3D25425F8E9E100E00931 /* GameInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInterface.swift; sourceTree = "<group>"; };
+		AEA3D25425F8E9E100E00931 /* MatchInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInterface.swift; sourceTree = "<group>"; };
 		AEA3D25925F8E9F800E00931 /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				AEA3D25925F8E9F800E00931 /* Set.swift */,
-				AEA3D25425F8E9E100E00931 /* GameInterface.swift */,
+				AEA3D25425F8E9E100E00931 /* MatchInterface.swift */,
 				AEA3D24D25F8E9CC00E00931 /* CoinFlipping.swift */,
 				AEA3D24B25F8E9CC00E00931 /* CoinFlippingResult.swift */,
 				AEA3D24C25F8E9CC00E00931 /* CoinFlippingSelect.swift */,
@@ -365,7 +365,7 @@
 				AEA3D20B25F8D23000E00931 /* Score.swift in Sources */,
 				54DB7C8F25F8D817001330CE /* TieBreak.swift in Sources */,
 				AEA3D24F25F8E9CC00E00931 /* CoinFlippingSelect.swift in Sources */,
-				AEA3D25525F8E9E100E00931 /* GameInterface.swift in Sources */,
+				AEA3D25525F8E9E100E00931 /* MatchInterface.swift in Sources */,
 				AE66A7C025B83C11002891F4 /* AppDelegate.swift in Sources */,
 				7520138B25F8D5F60027B482 /* GamePoint.swift in Sources */,
 				54C30B8025CABEA900F61D37 /* MatchKandaController.swift in Sources */,

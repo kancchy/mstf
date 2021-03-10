@@ -8,7 +8,7 @@
 import Foundation
 
 class TieBreak{
-    private (set) var gamePoint:Int!;
+    private (set) var gamePoint:[GamePointForTieBreak]!;
     private (set) var gamePointCountTeamA:Int? ;
     private (set) var gamePointCountTeamB:Int? ;
 }
