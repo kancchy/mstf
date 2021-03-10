@@ -21,6 +21,7 @@ class SeguePresenter:DelegateProtocol{
     var delegete:ViewController? = nil;
     func dataSet(segue: UIStoryboardSegue){
         
+//        var game:CurrentGame = CurrentGame.init();
         // Segueの識別子確認
         if segue.identifier == "matchSegue" {
 
