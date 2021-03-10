@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CurrentGame {
+class CurrentGame : GameInterFace {
     
     private (set) public var gameDate:Date? ;
     private (set) public var gameId:String? ;

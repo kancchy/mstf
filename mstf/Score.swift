@@ -6,12 +6,10 @@
 //
 
 import Foundation
+
+/// スコアドメインクラス
+/// - parameter setCount: セットカウント（Setクラスの配列）
 class Score {
-    private (set) var gameDate:Date? ;
-    private (set) var gameId:String? ;
-    private (set) var progress:String? ;
-    private (set) var surface:String? ;
-    private (set) var pastWins:String? ;
-    private (set) var score:String? ;
-    private (set) var team:String? ;
+    private (set) var setCount:[Set]? ;
+
 }
