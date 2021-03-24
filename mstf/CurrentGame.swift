@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CurrentGame : GameInterFace {
+class CurrentGame : MatchInterFace {
     
     private (set) public var gameDate:Date? ;
     private (set) public var gameId:String? ;

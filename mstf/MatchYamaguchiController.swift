@@ -20,13 +20,21 @@ class MatchYamaguchiController: UIViewController {
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var team1Name: UILabel!
     @IBOutlet weak var team2Name: UILabel!
+    // プレゼンターの初期化
+    let presenter = MatchPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.startNewSet()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func pushPoint1(_ sender: Any) {
+        print("pushPoint1")
+        // プレゼンターの呼び出し
+        presenter.scoredPoint(scoredTeam: "A")
+    }
     /*
     // MARK: - Navigation
 
