@@ -45,7 +45,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-sk-DFT">
                                 <rect key="frame" x="209" y="218" width="139" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ポイント1"/>
+                                <state key="normal" title="0"/>
                                 <connections>
                                     <action selector="pushPoint1:" destination="tZr-mu-pHA" eventType="touchUpInside" id="jiG-uJ-cjk"/>
                                 </connections>
@@ -53,7 +53,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-HA-zjV">
                                 <rect key="frame" x="500" y="218" width="139" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ポイント2"/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="pushPoint2:" destination="tZr-mu-pHA" eventType="touchUpInside" id="Nab-3Z-Xxm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clM-OI-DRa">
                                 <rect key="frame" x="235" y="296" width="98" height="52"/>
