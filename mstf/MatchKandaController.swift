@@ -65,6 +65,20 @@ class MatchKandaController: UIViewController {
 
         rightGameLine.addArrangedSubview(createStackViewCell2())
     }
+    
+    @IBAction func tapLeftFirstBtn(_ sender: Any) {
+        leftGameLine.addArrangedSubview(createStackViewCell())
+
+        rightGameLine.addArrangedSubview(createStackViewCell2())
+    }
+    
+    @IBAction func tapRightFirstBtn(_ sender: Any) {
+
+        rightGameLine.addArrangedSubview(createStackViewCell2())
+
+        leftGameLine.addArrangedSubview(createStackViewCell())
+    }
+    
     func createStackViewCell() -> UIView {
         // 新規追加するViewを作成
         let newView = UIView()

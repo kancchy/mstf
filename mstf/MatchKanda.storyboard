@@ -19,6 +19,20 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="394" placeholderIntrinsicHeight="564" translatesAutoresizingMaskIntoConstraints="NO" id="soU-s5-IuW">
                                 <rect key="frame" x="10" y="250" width="394" height="400"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebc-0J-vm2" userLabel="LeftFirstBtn">
+                                        <rect key="frame" x="70" y="160" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tapLeftFirstBtn:" destination="p5N-Rg-1wr" eventType="touchUpInside" id="ghG-dH-WRZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiC-mM-1nZ" userLabel="LightFirstBtn">
+                                        <rect key="frame" x="216" y="160" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tapRightFirstBtn:" destination="p5N-Rg-1wr" eventType="touchUpInside" id="sdI-jp-ZJ2"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="QrN-bA-afl">
                                         <rect key="frame" x="0.0" y="0.0" width="202" height="400"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
@@ -40,6 +54,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
+                                    <constraint firstItem="Ebc-0J-vm2" firstAttribute="leading" secondItem="soU-s5-IuW" secondAttribute="leading" constant="70" id="3fa-2Z-Js6"/>
                                     <constraint firstAttribute="bottom" secondItem="QrN-bA-afl" secondAttribute="bottom" id="5Ww-IO-Kp0"/>
                                     <constraint firstItem="QrN-bA-afl" firstAttribute="leading" secondItem="soU-s5-IuW" secondAttribute="leading" id="8Yk-a5-MtJ"/>
                                     <constraint firstItem="QrN-bA-afl" firstAttribute="width" secondItem="soU-s5-IuW" secondAttribute="width" multiplier="0.51269" id="8xA-Qy-55l"/>
@@ -47,8 +62,11 @@
                                     <constraint firstAttribute="height" constant="400" id="LUK-BV-xub"/>
                                     <constraint firstItem="pJ9-2E-g6p" firstAttribute="width" secondItem="soU-s5-IuW" secondAttribute="width" multiplier="0.474619" id="NEc-PP-mRU"/>
                                     <constraint firstItem="QrN-bA-afl" firstAttribute="top" secondItem="soU-s5-IuW" secondAttribute="top" id="cwm-Le-agw"/>
+                                    <constraint firstItem="Ebc-0J-vm2" firstAttribute="top" secondItem="soU-s5-IuW" secondAttribute="top" constant="160" id="eeE-jt-f9O"/>
+                                    <constraint firstItem="ZiC-mM-1nZ" firstAttribute="top" secondItem="soU-s5-IuW" secondAttribute="top" constant="160" id="fc4-I5-1VV"/>
                                     <constraint firstItem="pJ9-2E-g6p" firstAttribute="leading" secondItem="QrN-bA-afl" secondAttribute="trailing" constant="5" id="lbz-qf-T3S"/>
                                     <constraint firstAttribute="trailing" secondItem="pJ9-2E-g6p" secondAttribute="trailing" id="vGd-lM-Isw"/>
+                                    <constraint firstItem="ZiC-mM-1nZ" firstAttribute="leading" secondItem="Ebc-0J-vm2" secondAttribute="trailing" constant="100" id="vSs-hD-aGF"/>
                                     <constraint firstItem="pJ9-2E-g6p" firstAttribute="top" secondItem="soU-s5-IuW" secondAttribute="top" id="wLj-Nh-Tyr"/>
                                 </constraints>
                             </scrollView>
