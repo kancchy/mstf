@@ -19,25 +19,20 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="394" placeholderIntrinsicHeight="564" translatesAutoresizingMaskIntoConstraints="NO" id="soU-s5-IuW">
                                 <rect key="frame" x="10" y="250" width="394" height="400"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iCi-Vv-LIi">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="400"/>
-                                        <color key="backgroundColor" systemColor="systemTealColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="foQ-2h-aC4" appends="YES" id="bp3-DE-SF0"/>
-                                        </connections>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="QrN-bA-afl">
+                                        <rect key="frame" x="0.0" y="8" width="202" height="384"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
-                                    <constraint firstItem="iCi-Vv-LIi" firstAttribute="leading" secondItem="soU-s5-IuW" secondAttribute="leading" id="3Zx-4M-h1I"/>
-                                    <constraint firstAttribute="bottom" secondItem="iCi-Vv-LIi" secondAttribute="bottom" id="5a8-j4-5gd"/>
-                                    <constraint firstItem="iCi-Vv-LIi" firstAttribute="top" secondItem="soU-s5-IuW" secondAttribute="top" id="Dlr-r6-Ldc"/>
-                                    <constraint firstAttribute="trailing" secondItem="iCi-Vv-LIi" secondAttribute="trailing" id="G0m-Fp-oMH"/>
-                                    <constraint firstItem="iCi-Vv-LIi" firstAttribute="top" secondItem="soU-s5-IuW" secondAttribute="top" id="I7V-Qt-Fd8"/>
                                     <constraint firstAttribute="height" constant="400" id="LUK-BV-xub"/>
-                                    <constraint firstAttribute="bottom" secondItem="iCi-Vv-LIi" secondAttribute="bottom" id="QKW-X8-S9q"/>
-                                    <constraint firstItem="iCi-Vv-LIi" firstAttribute="width" secondItem="soU-s5-IuW" secondAttribute="width" id="oRS-Lw-uuN"/>
+                                    <constraint firstItem="QrN-bA-afl" firstAttribute="top" secondItem="soU-s5-IuW" secondAttribute="top" id="RTy-pA-ayz"/>
+                                    <constraint firstItem="QrN-bA-afl" firstAttribute="leading" secondItem="soU-s5-IuW" secondAttribute="leading" id="XU9-qI-ciu"/>
+                                    <constraint firstAttribute="trailing" secondItem="QrN-bA-afl" secondAttribute="trailing" id="h0z-U9-rbJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="QrN-bA-afl" secondAttribute="bottom" id="sg1-Om-lRR"/>
+                                    <constraint firstItem="QrN-bA-afl" firstAttribute="width" secondItem="soU-s5-IuW" secondAttribute="width" multiplier="0.51269" id="xxS-xR-iSm"/>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SF9-fT-KNP" userLabel="panelView">
@@ -148,7 +143,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="leftGameLine" destination="iCi-Vv-LIi" id="PyC-GB-m4i"/>
+                        <outlet property="leftGameLine" destination="QrN-bA-afl" id="bU5-ah-2jb"/>
                         <outlet property="leftGameNum" destination="X4H-cs-4O3" id="dgZ-KA-p3c"/>
                         <outlet property="leftSetNum" destination="tVr-xI-ygp" id="mwW-55-pOa"/>
                         <outlet property="player1Name" destination="nGc-6J-zMy" id="39O-rw-o3B"/>
@@ -160,21 +155,15 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ytQ-gh-80x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="foQ-2h-aC4">
-                    <connections>
-                        <action selector="tapLeftView:" destination="p5N-Rg-1wr" id="2yg-fv-Ol9"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="blE-v9-XCM">
-                    <connections>
-                        <action selector="tapRightView:" destination="p5N-Rg-1wr" id="jFC-FF-EeE"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="49.553571428571423"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="labelColor"/>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -184,11 +173,11 @@
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
