@@ -51,6 +51,18 @@ class SeguePresenter:DelegateProtocol{
             dateformatter.dateFormat = "yyyy/MM/dd"
             nextView.startDate = dateformatter.string(from: (delegete?.startDate.date)!);
             
+        } else if segue.identifier == "matchTajiri" {
+
+            // 遷移先ViewCntrollerの取得
+            let nextView = segue.destination as! MatchTajiriController;
+
+            // 値の設定
+            //nextView.player1Name.text? = (delegete?.player1.text!)!
+            //nextView.player2Name.text? = (delegete?.player2.text!)!
+
+            let dateformatter = DateFormatter()
+            dateformatter.dateFormat = "yyyy/MM/dd"
+            nextView.startDate = dateformatter.string(from: (delegete?.startDate.date)!);
         }
     }
 }

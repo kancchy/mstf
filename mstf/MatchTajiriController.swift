@@ -18,14 +18,23 @@ class MatchTajiriController: UIViewController {
     @IBOutlet weak var fault1Btn: UIButton!
     @IBOutlet weak var fault2Btn: UIButton!
     @IBOutlet weak var clearBtn: UIButton!
+    var startDate = "";
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 背景色
         self.point1Btn.backgroundColor = UIColor.yellow
         self.point2Btn.backgroundColor = UIColor.yellow
-        //角丸の程度を指定
+        self.fault1Btn.backgroundColor = UIColor.red
+        self.fault2Btn.backgroundColor = UIColor.red
+        self.clearBtn.backgroundColor = UIColor.systemPink
+        
+        // 角丸の程度を指定
         self.point1Btn.layer.cornerRadius = 20.0
+        self.point2Btn.layer.cornerRadius = 20.0
+        
+
     }
     
 
