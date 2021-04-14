@@ -23,4 +23,8 @@ class Game{
             gamePointCountTeamB += 1
         }
     }
+    
+    func cnvPoimt(point: Int) -> String {
+        return Point.findPoint(point).rawValue
+    }
 }

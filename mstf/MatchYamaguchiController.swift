@@ -25,8 +25,8 @@ class MatchYamaguchiController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.delegete = self
         presenter.startNewSet()
-
         // Do any additional setup after loading the view.
     }
     
@@ -34,6 +34,13 @@ class MatchYamaguchiController: UIViewController {
         print("pushPoint1")
         // プレゼンターの呼び出し
         presenter.scoredPoint(scoredTeam: "A")
+        presenter.changeButtonLabel()
+    }
+    @IBAction func pushPoint2(_ sender: Any) {
+        print("pushPoint2")
+        // プレゼンターの呼び出し
+        presenter.scoredPoint(scoredTeam: "B")
+        presenter.changeButtonLabel()
     }
     /*
     // MARK: - Navigation

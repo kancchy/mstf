@@ -30,6 +30,13 @@ class MatchPresenter:MatchProtocol{
         print(game?.gamePointCountTeamA ?? 0)
     }
     
+    func changeButtonLabel(){
+        let dispPoint1 = game?.cnvPoimt(point:game!.gamePointCountTeamA)
+        let dispPoint2 = game?.cnvPoimt(point:game!.gamePointCountTeamB)
+        delegete?.point1Btn.setTitle(dispPoint1, for: .normal)
+        delegete?.point2Btn.setTitle(dispPoint2, for: .normal)
+    }
+    
     func startNewSet(){
         set = Set();
         self.startNewGame()

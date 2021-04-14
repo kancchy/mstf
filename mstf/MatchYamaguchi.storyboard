@@ -54,6 +54,9 @@
                                 <rect key="frame" x="500" y="218" width="139" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ポイント2"/>
+                                <connections>
+                                    <action selector="pushPoint2:" destination="tZr-mu-pHA" eventType="touchUpInside" id="82B-uQ-1c1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clM-OI-DRa">
                                 <rect key="frame" x="235" y="296" width="98" height="52"/>
