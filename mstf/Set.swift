@@ -11,13 +11,35 @@ class Set {
     private (set) var numberOfGamesForTeamA:Int = 0 ;
     private (set) var numberOfGamesForTeamB:Int = 0 ;
     private (set) var breakGames:[Int]? ;
+    private (set) var gameNumOneSet:Int = 6 ;
+
     
-//    public func finish(setLabel set:Set) {
-//
-//    }
+    func scored(game:Game?){
+        let teamName = game?.findTheNameOfTheTeamThatGotTheGame()
+        if teamName == "A" {
+            numberOfGamesForTeamA += 1
+        } else {
+            numberOfGamesForTeamB += 1
+        }
+    }
     
-    public func finish(gameLabel game:String) {
-        
+    func isFinish(teamName:String) -> Bool{
+        // 取得したポイントがAdまたは４０だったらgameを終わらせる
+         //5-5終わらない
+         //6-5
+         //6-6
+         //5-4以下
+        print("game count::" + numberOfGamesForTeamA.description);
+        if teamName == "A" && numberOfGamesForTeamA >= gameNumOneSet {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    func findTheNameOfTheTeamThatGotTheSet() -> String{
+        // gameCountに追加した一番最後のポイントを取ったチーム名を返す
+        return "A";
     }
     
     public func findGame(gameNoLabel gameNo:Int) {

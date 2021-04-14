@@ -26,4 +26,22 @@ class Game{
     func cnvPoint(point:Int) -> String{
         return Point.findPoint(point).rawValue
     }
+    
+    func isFinish(teamName:String) -> Bool{
+        // 取得したポイントがAdまたは４０だったらgameを終わらせる
+         //40-40
+         //Ad-40
+         //40-30以下
+
+        if teamName == "A" && gamePointCountTeamA >= 3 {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    func findTheNameOfTheTeamThatGotTheGame() -> String{
+        // gamePointに追加した一番最後のポイントを取ったチーム名を返す
+        return "A";
+    }
 }
