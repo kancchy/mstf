@@ -19,10 +19,15 @@ class MatchTajiriController: UIViewController {
     @IBOutlet weak var fault2Btn: UIButton!
     @IBOutlet weak var clearBtn: UIButton!
     var startDate = "";
+    var inputPlayerName1 = "";
+    var inputPlayerName2 = "";
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        player1Name.text = inputPlayerName1;
+        player2Name.text = inputPlayerName2;
+        
         // 背景色
         self.point1Btn.backgroundColor = UIColor.yellow
         self.point2Btn.backgroundColor = UIColor.yellow

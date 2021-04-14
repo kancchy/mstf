@@ -57,8 +57,8 @@ class SeguePresenter:DelegateProtocol{
             let nextView = segue.destination as! MatchTajiriController;
 
             // 値の設定
-            //nextView.player1Name.text? = (delegete?.player1.text!)!
-            //nextView.player2Name.text? = (delegete?.player2.text!)!
+            nextView.inputPlayerName1 = (delegete?.player1.text!)!
+            nextView.inputPlayerName2 = (delegete?.player2.text!)!
 
             let dateformatter = DateFormatter()
             dateformatter.dateFormat = "yyyy/MM/dd"
