@@ -79,7 +79,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="田尻様！"/>
                                 <connections>
-                                    <segue destination="Wgp-Xv-O7Y" kind="show" id="n8c-WG-0q5"/>
+                                    <segue destination="Wgp-Xv-O7Y" kind="show" identifier="matchTajiri" id="n8c-WG-0q5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzU-0x-vwQ">

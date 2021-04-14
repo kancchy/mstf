@@ -24,7 +24,7 @@ class Game{
         }
     }
     
-    func cnvPoimt(point: Int) -> String {
+    func cnvPoint(point:Int) -> String{
         return Point.findPoint(point).rawValue
     }
 }

@@ -23,16 +23,14 @@ class MatchPresenter:MatchProtocol{
     var set:Set? = nil;
     
     func scoredPoint(scoredTeam: String){
-        print("MatchPresenterが呼び出されている")
         let gamePoint = GamePoint()
         gamePoint.scoredTeam = scoredTeam
         game?.scored(point: gamePoint)
-        print(game?.gamePointCountTeamA ?? 0)
     }
     
     func changeButtonLabel(){
-        let dispPoint1 = game?.cnvPoimt(point:game!.gamePointCountTeamA)
-        let dispPoint2 = game?.cnvPoimt(point:game!.gamePointCountTeamB)
+        let dispPoint1 = game?.cnvPoint(point:game!.gamePointCountTeamA)
+        let dispPoint2 = game?.cnvPoint(point:game!.gamePointCountTeamB)
         delegete?.point1Btn.setTitle(dispPoint1, for: .normal)
         delegete?.point2Btn.setTitle(dispPoint2, for: .normal)
     }

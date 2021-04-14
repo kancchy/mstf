@@ -45,7 +45,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-sk-DFT">
                                 <rect key="frame" x="209" y="218" width="139" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ポイント1"/>
+                                <state key="normal" title="0"/>
                                 <connections>
                                     <action selector="pushPoint1:" destination="tZr-mu-pHA" eventType="touchUpInside" id="jiG-uJ-cjk"/>
                                 </connections>

@@ -31,13 +31,12 @@ class MatchYamaguchiController: UIViewController {
     }
     
     @IBAction func pushPoint1(_ sender: Any) {
-        print("pushPoint1")
         // プレゼンターの呼び出し
         presenter.scoredPoint(scoredTeam: "A")
         presenter.changeButtonLabel()
     }
+    
     @IBAction func pushPoint2(_ sender: Any) {
-        print("pushPoint2")
         // プレゼンターの呼び出し
         presenter.scoredPoint(scoredTeam: "B")
         presenter.changeButtonLabel()
