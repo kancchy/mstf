@@ -23,10 +23,10 @@ class MatchPresenter:MatchProtocol{
     var set:Set = Set();
     var score:Score = Score();
 
-    
     func scoredPoint(scoredTeam: String){
         game.activePoint.scoredTeam = scoredTeam
         // Gameが終わっているか判定
+
         print("game is Finish:" + game.isFinish(teamName: scoredTeam).description);
         if (game.isFinish(teamName: scoredTeam)) {
             game.scored(point: game.activePoint)
@@ -54,12 +54,14 @@ class MatchPresenter:MatchProtocol{
     
     func finishGame(){
         set.scored(game: game);
-        print("set is inish:" + set.isFinish(teamName: game.findTheNameOfTheTeamThatGotTheGame()).description);
+        print("set is finish:" + set.isFinish(teamName: game.findTheNameOfTheTeamThatGotTheGame()).description);
         if set.isFinish(teamName: game.findTheNameOfTheTeamThatGotTheGame()) {
             score.scored(set: set);
             if score.isFinish(teamName: set.findTheNameOfTheTeamThatGotTheSet()){
                 //試合終了
                 score.finish();
+                self.startNewSet()
+
             }else{
                 self.startNewSet()
             }

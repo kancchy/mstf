@@ -15,6 +15,7 @@ class Set {
 
     
     func scored(game:Game?){
+        gameCount.append(game!);
         let teamName = game?.findTheNameOfTheTeamThatGotTheGame()
         if teamName == "A" {
             numberOfGamesForTeamA += 1
@@ -25,21 +26,21 @@ class Set {
     
     func isFinish(teamName:String) -> Bool{
         // 取得したポイントがAdまたは４０だったらgameを終わらせる
-         //5-5終わらない
-         //6-5
-         //6-6
-         //5-4以下
-        print("game count::" + numberOfGamesForTeamA.description);
-        if teamName == "A" && numberOfGamesForTeamA >= gameNumOneSet {
-            return true;
-        } else {
-            return false;
+        print("game count A::" + numberOfGamesForTeamA.description);
+        print("game count B::" + numberOfGamesForTeamB.description);
+
+        if numberOfGamesForTeamA > numberOfGamesForTeamB && numberOfGamesForTeamA >= gameNumOneSet && teamName == "A" {
+            return true
+        } else if numberOfGamesForTeamA < numberOfGamesForTeamB && numberOfGamesForTeamB >= gameNumOneSet && teamName == "B" {
+            return true
+        } else{
+            return false
         }
     }
     
     func findTheNameOfTheTeamThatGotTheSet() -> String{
         // gameCountに追加した一番最後のポイントを取ったチーム名を返す
-        return "A";
+        return gameCount.last!.scoredTeam
     }
     
     public func findGame(gameNoLabel gameNo:Int) {
