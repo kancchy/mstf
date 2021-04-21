@@ -25,7 +25,7 @@ class MatchYamaguchiController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.delegete = self
+        presenter.delegate = self
         presenter.startNewSet()
         // Do any additional setup after loading the view.
     }

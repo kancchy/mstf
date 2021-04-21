@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        present.delegete = self
+        present.delegate = self
     }
     
     @IBOutlet weak var player1: UITextField!

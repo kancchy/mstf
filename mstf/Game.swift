@@ -8,7 +8,7 @@
 import Foundation
 
 class Game{
-    private (set) var gamePoint:[GamePoint]?;
+    private (set) var gamePoint:[GamePoint] = [];
     private (set) var gamePointCountTeamA:Int = 0;
     private (set) var gamePointCountTeamB:Int = 0;
     // サーバ/レシーバーにはチーム名が入る
@@ -16,7 +16,7 @@ class Game{
     private (set) var reciever:String? ;
     
     func scored(point:GamePoint){
-        gamePoint?.append(point)
+        gamePoint.append(point)
         if point.scoredTeam == "A" {
             gamePointCountTeamA += 1
         } else {
@@ -25,24 +25,35 @@ class Game{
     }
     
     func cnvPoint(point:Int) -> String{
+        let max: Int
+        if gamePointCountTeamA >= 3 && gamePointCountTeamB >= 3 {
+            if gamePointCountTeamA > gamePointCountTeamB {
+                max = gamePointCountTeamA
+            } else if gamePointCountTeamA < gamePointCountTeamB {
+                max = gamePointCountTeamB
+            } else{
+                return Point.findPoint(point).rawValue
+            }
+            if max == point {
+                return Point.Advantage.rawValue
+            }
+        }
         return Point.findPoint(point).rawValue
     }
     
     func isFinish(teamName:String) -> Bool{
         // 取得したポイントがAdまたは４０だったらgameを終わらせる
-         //40-40
-         //Ad-40
-         //40-30以下
-
-        if teamName == "A" && gamePointCountTeamA >= 3 {
-            return true;
-        } else {
-            return false;
+        if gamePointCountTeamA > gamePointCountTeamB && gamePointCountTeamA >= 3 && teamName == "A" {
+            return true
+        } else if gamePointCountTeamA < gamePointCountTeamB && gamePointCountTeamB >= 3 && teamName == "B" {
+            return true
+        } else{
+            return false
         }
     }
     
     func findTheNameOfTheTeamThatGotTheGame() -> String{
         // gamePointに追加した一番最後のポイントを取ったチーム名を返す
-        return "A";
+        return gamePoint.last!.scoredTeam
     }
 }

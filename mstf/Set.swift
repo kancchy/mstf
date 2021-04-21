@@ -7,7 +7,7 @@
 
 import Foundation
 class Set {
-    private (set) var gameCount:[Game]? ;
+    private (set) var gameCount:[Game] = [] ;
     private (set) var numberOfGamesForTeamA:Int = 0 ;
     private (set) var numberOfGamesForTeamB:Int = 0 ;
     private (set) var breakGames:[Int]? ;

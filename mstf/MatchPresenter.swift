@@ -18,7 +18,7 @@ extension MatchProtocol{
 }
 
 class MatchPresenter:MatchProtocol{
-    var delegete:MatchYamaguchiController? = nil;
+    var delegate:MatchYamaguchiController? = nil;
     var game:Game? = nil;
     var set:Set? = nil;
     var score:Score = Score();
@@ -28,7 +28,7 @@ class MatchPresenter:MatchProtocol{
         let gamePoint = GamePoint()
         gamePoint.scoredTeam = scoredTeam
         // Gameが終わっているか判定
-        print("game is inish:" + game!.isFinish(teamName: scoredTeam).description);
+        print("game is Finish:" + game!.isFinish(teamName: scoredTeam).description);
         if (game!.isFinish(teamName: scoredTeam)) {
             game?.scored(point: gamePoint)
             self.finishGame();
@@ -40,8 +40,8 @@ class MatchPresenter:MatchProtocol{
     func changeButtonLabel(){
         let dispPoint1 = game?.cnvPoint(point:game!.gamePointCountTeamA)
         let dispPoint2 = game?.cnvPoint(point:game!.gamePointCountTeamB)
-        delegete?.point1Btn.setTitle(dispPoint1, for: .normal)
-        delegete?.point2Btn.setTitle(dispPoint2, for: .normal)
+        delegate?.point1Btn.setTitle(dispPoint1, for: .normal)
+        delegate?.point2Btn.setTitle(dispPoint2, for: .normal)
     }
     
     func startNewSet(){
@@ -68,4 +68,11 @@ class MatchPresenter:MatchProtocol{
             self.startNewGame()
         }
     }
+    
+    func finishScore(){
+           //試合終了
+           score.finish();
+           delegate?.point1Btn.isEnabled = false
+           delegate?.point2Btn.isEnabled = false
+       }
 }

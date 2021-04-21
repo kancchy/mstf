@@ -18,7 +18,7 @@ extension DelegateProtocol{
 }
 
 class SeguePresenter:DelegateProtocol{
-    var delegete:ViewController? = nil;
+    var delegate:ViewController? = nil;
     func dataSet(segue: UIStoryboardSegue){
         
 //        var game:CurrentGame = CurrentGame.init();
@@ -28,28 +28,28 @@ class SeguePresenter:DelegateProtocol{
             // 遷移先ViewCntrollerの取得
             let nextView = segue.destination as! MatchController;
             // 値の設定
-            nextView.player1Name = (delegete?.player1.text!)!
-            nextView.player2Name = (delegete?.player2.text!)!
-            nextView.player3Name = (delegete?.player3.text!)!
-            nextView.player4Name = (delegete?.player4.text!)!
+            nextView.player1Name = (delegate?.player1.text!)!
+            nextView.player2Name = (delegate?.player2.text!)!
+            nextView.player3Name = (delegate?.player3.text!)!
+            nextView.player4Name = (delegate?.player4.text!)!
             
             let dateformatter = DateFormatter()
             dateformatter.dateFormat = "yyyy/MM/dd"
-            nextView.date = dateformatter.string(from: (delegete?.startDate.date)!);
+            nextView.date = dateformatter.string(from: (delegate?.startDate.date)!);
             
         } else if segue.identifier == "matchKanda" {
 
             // 遷移先ViewCntrollerの取得
             let nextView = segue.destination as! MatchKandaController;
             // 値の設定
-            nextView.receivedPlayer1Name = (delegete?.player1.text!)!
-            nextView.receivedPlayer2Name = (delegete?.player2.text!)!
-            nextView.receivedPlayer3Name = (delegete?.player3.text!)!
-            nextView.receivedPlayer4Name = (delegete?.player4.text!)!
+            nextView.receivedPlayer1Name = (delegate?.player1.text!)!
+            nextView.receivedPlayer2Name = (delegate?.player2.text!)!
+            nextView.receivedPlayer3Name = (delegate?.player3.text!)!
+            nextView.receivedPlayer4Name = (delegate?.player4.text!)!
             
             let dateformatter = DateFormatter()
             dateformatter.dateFormat = "yyyy/MM/dd"
-            nextView.startDate = dateformatter.string(from: (delegete?.startDate.date)!);
+            nextView.startDate = dateformatter.string(from: (delegate?.startDate.date)!);
             
         } else if segue.identifier == "matchTajiri" {
 
@@ -57,12 +57,12 @@ class SeguePresenter:DelegateProtocol{
             let nextView = segue.destination as! MatchTajiriController;
 
             // 値の設定
-            nextView.inputPlayerName1 = (delegete?.player1.text!)!
-            nextView.inputPlayerName2 = (delegete?.player2.text!)!
+            nextView.inputPlayerName1 = (delegate?.player1.text!)!
+            nextView.inputPlayerName2 = (delegate?.player2.text!)!
 
             let dateformatter = DateFormatter()
             dateformatter.dateFormat = "yyyy/MM/dd"
-            nextView.startDate = dateformatter.string(from: (delegete?.startDate.date)!);
+            nextView.startDate = dateformatter.string(from: (delegate?.startDate.date)!);
         }
     }
 }
