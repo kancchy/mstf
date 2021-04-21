@@ -17,7 +17,7 @@ enum Point :String{
     case thirty = "30"
     case forty = "40"
     case Deuce
-    case Advantage
+    case Advantage = "A"
     
     static func findPoint(_ point:Int) -> Point{
         if(point == 0){
@@ -29,6 +29,6 @@ enum Point :String{
         }else if point == 3{
             return Point.forty
         }
-        return Point.Advantage
+        return Point.forty
     }
 }

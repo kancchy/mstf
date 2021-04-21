@@ -21,11 +21,20 @@ class MatchPresenter:MatchProtocol{
     var delegete:MatchYamaguchiController? = nil;
     var game:Game? = nil;
     var set:Set? = nil;
+    var score:Score = Score();
+
     
     func scoredPoint(scoredTeam: String){
         let gamePoint = GamePoint()
         gamePoint.scoredTeam = scoredTeam
-        game?.scored(point: gamePoint)
+        // Gameが終わっているか判定
+        print("game is inish:" + game!.isFinish(teamName: scoredTeam).description);
+        if (game!.isFinish(teamName: scoredTeam)) {
+            game?.scored(point: gamePoint)
+            self.finishGame();
+        } else {
+            game?.scored(point: gamePoint)
+        }
     }
     
     func changeButtonLabel(){
@@ -44,16 +53,19 @@ class MatchPresenter:MatchProtocol{
         game = Game();
     }
     
-//    func finishGame(){
-//        set?.scored(game: gamePoint);
-//        if /*セットが終わったかどうか*/{
-//            if /*試合が終わったかどうか*/{
-//                //試合終了
-//            }else{
-//                self.startNewSet()
-//            }
-//        }else{
-//            self.startNewGame()
-//        }
-//    }
+    func finishGame(){
+        set?.scored(game: game);
+        print("set is inish:" + set!.isFinish(teamName: game!.findTheNameOfTheTeamThatGotTheGame()).description);
+        if set!.isFinish(teamName: game!.findTheNameOfTheTeamThatGotTheGame()) {
+            score.scored(set: set);
+            if score.isFinish(teamName: set!.findTheNameOfTheTeamThatGotTheSet()){
+                //試合終了
+                score.finish();
+            }else{
+                self.startNewSet()
+            }
+        }else{
+            self.startNewGame()
+        }
+    }
 }
