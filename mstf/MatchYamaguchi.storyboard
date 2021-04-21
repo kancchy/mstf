@@ -41,6 +41,9 @@
                                 <rect key="frame" x="406" y="343" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="クリア"/>
+                                <connections>
+                                    <action selector="clearGamePoint:" destination="tZr-mu-pHA" eventType="touchUpInside" id="h7R-MR-kA6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-sk-DFT">
                                 <rect key="frame" x="209" y="218" width="139" height="96"/>
@@ -62,11 +65,17 @@
                                 <rect key="frame" x="235" y="296" width="98" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="フォルト1"/>
+                                <connections>
+                                    <action selector="pushFault1:" destination="tZr-mu-pHA" eventType="touchUpInside" id="5bG-Fl-Ixu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5Q-5l-Wjx">
                                 <rect key="frame" x="520" y="296" width="98" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="フォルト2"/>
+                                <connections>
+                                    <action selector="pushFault2:" destination="tZr-mu-pHA" eventType="touchUpInside" id="K3L-DI-zvt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="スコア1-1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uip-NL-9hU">
                                 <rect key="frame" x="216" y="60" width="75" height="32"/>

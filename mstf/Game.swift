@@ -14,6 +14,7 @@ class Game{
     // サーバ/レシーバーにはチーム名が入る
     private (set) var server:String? ;
     private (set) var reciever:String? ;
+    var activePoint:GamePoint = GamePoint();
     
     func scored(point:GamePoint){
         gamePoint.append(point)
@@ -22,6 +23,7 @@ class Game{
         } else {
             gamePointCountTeamB += 1
         }
+        activePoint = GamePoint()
     }
     
     func cnvPoint(point:Int) -> String{
@@ -56,4 +58,6 @@ class Game{
         // gamePointに追加した一番最後のポイントを取ったチーム名を返す
         return gamePoint.last!.scoredTeam
     }
+    
+    
 }

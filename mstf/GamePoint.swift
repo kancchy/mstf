@@ -9,5 +9,5 @@ import Foundation
 class GamePoint {
     //public var pointPattern:PointPattern? ;
     public var scoredTeam:String = "";
-    public var fault:String? ;
+    public var fault:Bool = false;
 }

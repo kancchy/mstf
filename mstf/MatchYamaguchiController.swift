@@ -26,7 +26,7 @@ class MatchYamaguchiController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.delegate = self
-        presenter.startNewSet()
+//        presenter.startNewSet()
         // Do any additional setup after loading the view.
     }
     
@@ -50,5 +50,19 @@ class MatchYamaguchiController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func clearGamePoint(_ sender: Any) {
+        // プレゼンターの呼び出し
+        presenter.startNewGame()
+        presenter.changeButtonLabel()
+    }
+    
+    @IBAction func pushFault1(_ sender: Any) {
+        presenter.fault(faultTeam: "A")
+        presenter.changeButtonLabel()
+    }
+    
+    @IBAction func pushFault2(_ sender: Any) {
+        presenter.fault(faultTeam: "B")
+        presenter.changeButtonLabel()
+    }
 }
