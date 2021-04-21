@@ -16,6 +16,7 @@ class Score {
     private (set) var setNumOneScore:Int = 1 ;
 
     func scored(set:Set?){
+        setCount.append(set!);
         let teamName = set?.findTheNameOfTheTeamThatGotTheSet()
         if teamName == "A" {
             numberOfSetsForTeamA += 1
@@ -24,18 +25,19 @@ class Score {
         }
     }
 
-    
     func isFinish(teamName:String) -> Bool{
         print("set count:" + numberOfSetsForTeamA.description);
-        if teamName == "A" && numberOfSetsForTeamA >= setNumOneScore {
-            return true;
-        } else {
-            return false;
+        print("set count:" + numberOfSetsForTeamB.description);
+        if numberOfSetsForTeamA > numberOfSetsForTeamB && numberOfSetsForTeamA >= setNumOneScore && teamName == "A" {
+            return true
+        } else if numberOfSetsForTeamB < numberOfSetsForTeamB && numberOfSetsForTeamB >= setNumOneScore && teamName == "B" {
+            return true
+        } else{
+            return false
         }
     }
     
     func finish(){
         print("game is over!!!!!!");
-
     }
 }

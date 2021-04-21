@@ -15,6 +15,8 @@ class Game{
     private (set) var server:String? ;
     private (set) var reciever:String? ;
     
+    public var scoredTeam:String = "";
+    
     func scored(point:GamePoint){
         gamePoint.append(point)
         if point.scoredTeam == "A" {
@@ -44,8 +46,10 @@ class Game{
     func isFinish(teamName:String) -> Bool{
         // 取得したポイントがAdまたは４０だったらgameを終わらせる
         if gamePointCountTeamA > gamePointCountTeamB && gamePointCountTeamA >= 3 && teamName == "A" {
+            scoredTeam = "A";
             return true
         } else if gamePointCountTeamA < gamePointCountTeamB && gamePointCountTeamB >= 3 && teamName == "B" {
+            scoredTeam = "B";
             return true
         } else{
             return false
