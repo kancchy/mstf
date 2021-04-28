@@ -25,6 +25,8 @@ class MatchYamaguchiController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // headerのBackが重ならなくなる
+        edgesForExtendedLayout = []
         presenter.delegate = self
 //        presenter.startNewSet()
         // Do any additional setup after loading the view.

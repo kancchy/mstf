@@ -14,6 +14,7 @@
 		54DB7C6D25E6608A001330CE /* SeguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DB7C6C25E6608A001330CE /* SeguePresenter.swift */; };
 		54DB7C8A25F8D715001330CE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DB7C8925F8D715001330CE /* Game.swift */; };
 		54DB7C8F25F8D817001330CE /* TieBreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DB7C8E25F8D817001330CE /* TieBreak.swift */; };
+		54E0D5F026398CD5005F647F /* ViewDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E0D5EF26398CD5005F647F /* ViewDetailController.swift */; };
 		7520138B25F8D5F60027B482 /* GamePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520138A25F8D5F60027B482 /* GamePoint.swift */; };
 		7520139225F8D6EE0027B482 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520139125F8D6EE0027B482 /* Constant.swift */; };
 		7520139A25F8D9B30027B482 /* GamePointForTieBreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520139925F8D9B30027B482 /* GamePointForTieBreak.swift */; };
@@ -64,6 +65,7 @@
 		54DB7C6C25E6608A001330CE /* SeguePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePresenter.swift; sourceTree = "<group>"; };
 		54DB7C8925F8D715001330CE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		54DB7C8E25F8D817001330CE /* TieBreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TieBreak.swift; sourceTree = "<group>"; };
+		54E0D5EF26398CD5005F647F /* ViewDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailController.swift; sourceTree = "<group>"; };
 		7520138A25F8D5F60027B482 /* GamePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePoint.swift; sourceTree = "<group>"; };
 		7520139125F8D6EE0027B482 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7520139925F8D9B30027B482 /* GamePointForTieBreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePointForTieBreak.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				AE66A7F225B84490002891F4 /* MatchController.swift */,
+				54E0D5EF26398CD5005F647F /* ViewDetailController.swift */,
 				AE66A7C325B83C11002891F4 /* ViewController.swift */,
 				54C30B7A25CABCE700F61D37 /* MatchTajiriController.swift */,
 				54C30B7F25CABEA900F61D37 /* MatchKandaController.swift */,
@@ -378,6 +381,7 @@
 				7520139A25F8D9B30027B482 /* GamePointForTieBreak.swift in Sources */,
 				7520139225F8D6EE0027B482 /* Constant.swift in Sources */,
 				AEA3D25A25F8E9F800E00931 /* Set.swift in Sources */,
+				54E0D5F026398CD5005F647F /* ViewDetailController.swift in Sources */,
 				AEA3D21025F8D23E00E00931 /* Team.swift in Sources */,
 				54DB7C6D25E6608A001330CE /* SeguePresenter.swift in Sources */,
 				AE66A7C225B83C11002891F4 /* SceneDelegate.swift in Sources */,

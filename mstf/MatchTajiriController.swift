@@ -25,6 +25,8 @@ class MatchTajiriController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        edgesForExtendedLayout = []
+        
         player1Name.text = inputPlayerName1;
         player2Name.text = inputPlayerName2;
         
