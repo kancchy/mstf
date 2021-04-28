@@ -18,6 +18,9 @@ class MatchKandaController: UIViewController {
     var player1sPoint = "";
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        edgesForExtendedLayout = []
+        
         player1Name.text = receivedPlayer1Name;
         player2Name.text = receivedPlayer2Name;
         player3Name.text = receivedPlayer3Name;
