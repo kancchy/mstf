@@ -126,5 +126,4 @@ class MatchKandaController: UIViewController {
         newView.translatesAutoresizingMaskIntoConstraints = false
         return newView;
     }
-
 }

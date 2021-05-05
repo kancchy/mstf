@@ -7,6 +7,18 @@
 
 import UIKit
 
+extension UINavigationController {
+    open override var shouldAutorotate: Bool {
+        guard let viewCtrl = self.visibleViewController else{return true}
+        return viewCtrl.shouldAutorotate
+    }
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        guard let viewCtrl = self.visibleViewController else{return .all}
+        return viewCtrl.supportedInterfaceOrientations
+    }
+}
+
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var makeMatch: UIButton!
