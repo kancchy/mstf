@@ -20,6 +20,12 @@ class MatchYamaguchiController: UIViewController {
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var team1Name: UILabel!
     @IBOutlet weak var team2Name: UILabel!
+    
+    @IBOutlet weak var team1StackView: UIStackView!
+    @IBOutlet weak var team2StackView: UIStackView!
+    /// 作成したViewのカウンター
+    var count:Int = 0
+    
     // プレゼンターの初期化
     let presenter = MatchPresenter()
     
@@ -37,12 +43,21 @@ class MatchYamaguchiController: UIViewController {
         // プレゼンターの呼び出し
         presenter.scoredPoint(scoredTeam: "A")
         presenter.changeButtonLabel()
+        // stackViewにnewViewを追加する
+        team1StackView.addArrangedSubview(createStackViewCell())
+
+        team2StackView.addArrangedSubview(createStackViewCell2())
     }
     
     @IBAction func pushPoint2(_ sender: Any) {
         // プレゼンターの呼び出し
         presenter.scoredPoint(scoredTeam: "B")
         presenter.changeButtonLabel()
+        
+        // stackViewにnewViewを追加する
+        team1StackView.addArrangedSubview(createStackViewCell())
+
+        team2StackView.addArrangedSubview(createStackViewCell2())
     }
     /*
     // MARK: - Navigation
@@ -68,6 +83,54 @@ class MatchYamaguchiController: UIViewController {
         presenter.fault(faultTeam: "B")
         presenter.changeButtonLabel()
     }
+    
+    func createStackViewCell() -> UIView {
+        // 新規追加するViewを作成
+        let newView = UIView()
+        let label = UILabel()
+        newView.addSubview(label);
+        // 背景を緑に設定
+        newView.backgroundColor = UIColor.green
+        // 枠線を設定
+        newView.layer.borderColor = UIColor.black.cgColor
+        newView.layer.borderWidth = 1.0
+        // 追加されたViewがわかりやすいように、ナンバリング
+        label.text = "\(count)"
+        label.sizeToFit()
+        label.textColor = UIColor.black
+        // ナンバリング用のカウンタをインクリメント
+        count += 1
+        // 新規Viewに height=100 の制約を追加 ←【超重要】
+        newView.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+        newView.widthAnchor.constraint(equalToConstant: 50.0).isActive = true
+        newView.translatesAutoresizingMaskIntoConstraints = false
+        return newView;
+    }
+    
+    func createStackViewCell2() -> UIView {
+        // 新規追加するViewを作成
+        let newView = UIView()
+        let label = UILabel()
+        newView.addSubview(label);
+        // 背景を緑に設定
+        newView.backgroundColor = UIColor.yellow
+        // 枠線を設定
+        newView.layer.borderColor = UIColor.black.cgColor
+        newView.layer.borderWidth = 1.0
+        // 追加されたViewがわかりやすいように、ナンバリング
+        label.text = "\(count)"
+        label.sizeToFit()
+        label.textColor = UIColor.black
+        // ナンバリング用のカウンタをインクリメント
+        count += 1
+        // 新規Viewに height=100 の制約を追加 ←【超重要】
+        newView.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+        newView.widthAnchor.constraint(equalToConstant: 50.0).isActive = true
+        newView.translatesAutoresizingMaskIntoConstraints = false
+        return newView;
+    }
+    
+    
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         //左横画面に変更
