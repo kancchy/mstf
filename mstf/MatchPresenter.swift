@@ -46,6 +46,9 @@ class MatchPresenter:MatchProtocol{
     func startNewSet(){
         set = Set();
         self.startNewGame()
+        // stackViewにnewViewを追加する
+        delegate?.team1StackView.addArrangedSubview(createStackViewCell())
+        delegate?.team2StackView.addArrangedSubview(createStackViewCell2())
     }
     
     func startNewGame(){
@@ -53,6 +56,7 @@ class MatchPresenter:MatchProtocol{
     }
     
     func finishGame(){
+ 
         set.scored(game: game);
         print("set is finish:" + set.isFinish(teamName: game.findTheNameOfTheTeamThatGotTheGame()).description);
         if set.isFinish(teamName: game.findTheNameOfTheTeamThatGotTheGame()) {
@@ -68,6 +72,13 @@ class MatchPresenter:MatchProtocol{
         }else{
             self.startNewGame()
         }
+        
+        var test:UIView?  = delegate?.team1StackView.subviews.last
+        var testLabel: UILabel?  = test!.subviews.first as? UILabel
+        testLabel?.text = "\(set.numberOfGamesForTeamA)"
+        test = delegate?.team2StackView.subviews.last
+        testLabel  = test!.subviews.first as? UILabel
+        testLabel?.text = "\(set.numberOfGamesForTeamB)"
     }
     
     func finishScore(){
@@ -87,4 +98,50 @@ class MatchPresenter:MatchProtocol{
         //フォルトフラグ真偽逆転
         game.activePoint.fault = true
     }
+    
+    func createStackViewCell() -> UIView {
+        // 新規追加するViewを作成
+        let newView = UIView()
+        let label = UILabel()
+        newView.addSubview(label);
+        // 背景を緑に設定
+        newView.backgroundColor = UIColor.green
+        // 枠線を設定
+        newView.layer.borderColor = UIColor.black.cgColor
+        newView.layer.borderWidth = 1.0
+        // 追加されたViewがわかりやすいように、ナンバリング
+        label.text = "A"
+        label.sizeToFit()
+        label.textColor = UIColor.black
+        label.tag = 1
+
+        // 新規Viewに height=100 の制約を追加 ←【超重要】
+        newView.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+        newView.widthAnchor.constraint(equalToConstant: 50.0).isActive = true
+        newView.translatesAutoresizingMaskIntoConstraints = false
+        return newView;
+    }
+    
+    func createStackViewCell2() -> UIView {
+        // 新規追加するViewを作成
+        let newView = UIView()
+        let label = UILabel()
+        newView.addSubview(label);
+        // 背景を緑に設定
+        newView.backgroundColor = UIColor.yellow
+        // 枠線を設定
+        newView.layer.borderColor = UIColor.black.cgColor
+        newView.layer.borderWidth = 1.0
+        // 追加されたViewがわかりやすいように、ナンバリング
+        label.text = "B"
+        label.sizeToFit()
+        label.textColor = UIColor.black
+        label.tag = 2
+        // 新規Viewに height=100 の制約を追加 ←【超重要】
+        newView.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+        newView.widthAnchor.constraint(equalToConstant: 50.0).isActive = true
+        newView.translatesAutoresizingMaskIntoConstraints = false
+        return newView;
+    }
+
 }
