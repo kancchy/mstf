@@ -19,6 +19,7 @@ extension DelegateProtocol{
 
 class SeguePresenter:DelegateProtocol{
     var delegate:ViewController? = nil;
+    var viewDetailDelegate:ViewDetailController? = nil;
     func dataSet(segue: UIStoryboardSegue){
         
 //        var game:CurrentGame = CurrentGame.init();
@@ -71,12 +72,19 @@ class SeguePresenter:DelegateProtocol{
             let nextView = segue.destination as! MatchTajiriController;
 
             // 値の設定
-            nextView.inputPlayerName1 = (delegate?.player1.text!)!
-            nextView.inputPlayerName2 = (delegate?.player2.text!)!
-
-            let dateformatter = DateFormatter()
-            dateformatter.dateFormat = "yyyy/MM/dd"
-            nextView.startDate = dateformatter.string(from: (delegate?.startDate.date)!);
+            if delegate != nil{
+                // ViewControllerからスコア集計画面に遷移するボタンが押された場合
+                nextView.inputPlayerName1 = (delegate?.player1.text!)!
+                nextView.inputPlayerName2 = (delegate?.player2.text!)!
+                let dateformatter = DateFormatter()
+                dateformatter.dateFormat = "yyyy/MM/dd"
+                nextView.startDate = dateformatter.string(from: (delegate?.startDate.date)!);
+            }else{
+                // ViewDetailControllerからスコア集計画面に遷移するボタンが押された場合
+                nextView.inputPlayerName1 = (viewDetailDelegate?.serverPlayerName.description)!
+                print("セット数：" + (viewDetailDelegate?.playSetCount.description)!)
+                print("ゲーム数：" + (viewDetailDelegate?.playGameCount.description)!)
+            }
         }
     }
 }

@@ -59,6 +59,15 @@ class MatchPresenter:MatchProtocol{
  
         set.scored(game: game);
         print("set is finish:" + set.isFinish(teamName: game.findTheNameOfTheTeamThatGotTheGame()).description);
+        
+        // 画面にゲームを反映
+        var nowSet:UIView?  = delegate?.team1StackView.subviews.last
+        var testLabel: UILabel?  = nowSet!.subviews.first as? UILabel
+        testLabel?.text = "\(set.numberOfGamesForTeamA)"
+        nowSet = delegate?.team2StackView.subviews.last
+        testLabel  = nowSet!.subviews.first as? UILabel
+        testLabel?.text = "\(set.numberOfGamesForTeamB)"
+        
         if set.isFinish(teamName: game.findTheNameOfTheTeamThatGotTheGame()) {
             score.scored(set: set);
             if score.isFinish(teamName: set.findTheNameOfTheTeamThatGotTheSet()){
@@ -72,13 +81,6 @@ class MatchPresenter:MatchProtocol{
         }else{
             self.startNewGame()
         }
-        
-        var test:UIView?  = delegate?.team1StackView.subviews.last
-        var testLabel: UILabel?  = test!.subviews.first as? UILabel
-        testLabel?.text = "\(set.numberOfGamesForTeamA)"
-        test = delegate?.team2StackView.subviews.last
-        testLabel  = test!.subviews.first as? UILabel
-        testLabel?.text = "\(set.numberOfGamesForTeamB)"
     }
     
     func finishScore(){
