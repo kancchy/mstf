@@ -23,6 +23,13 @@ class MatchYamaguchiController: UIViewController {
     
     @IBOutlet weak var team1StackView: UIStackView!
     @IBOutlet weak var team2StackView: UIStackView!
+    var startDate = "";
+    var inputPlayerName1 = "";
+    var inputPlayerName2 = "";
+    var inputPlayerName3 = "";
+    var inputPlayerName4 = "";
+    var serverTeamName = "";
+    
     /// 作成したViewのカウンター
     var count:Int = 0
     
@@ -31,6 +38,11 @@ class MatchYamaguchiController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        player1Name.text = inputPlayerName1;
+        player2Name.text = inputPlayerName2;
+        player3Name.text = inputPlayerName3;
+        player4Name.text = inputPlayerName4;
+        print("serverTeamName: " + serverTeamName)
         // headerのBackが重ならなくなる
         edgesForExtendedLayout = []
         presenter.delegate = self

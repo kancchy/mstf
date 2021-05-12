@@ -17,15 +17,19 @@ class ViewDetailController: UIViewController , UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var setSelect: UIPickerView!
     @IBOutlet weak var gameSelect: UIPickerView!
     
+    @IBOutlet weak var serverTeam1: UIView!
+    @IBOutlet weak var serverTeam2: UIView!
+    
     // 前画面から引き継いだデータ
     var receivedPlayer1Name = "";
     var receivedPlayer2Name = "";
     var receivedPlayer3Name = "";
     var receivedPlayer4Name = "";
     var startDate = "";
-    
+
     // この画面で選択したデータ
     var serverPlayerName = "";
+    var serverPlayerTeam = "";
     var playSetCount = 0;
     var playGameCount = 0;
     
@@ -69,6 +73,20 @@ class ViewDetailController: UIViewController , UIPickerViewDelegate, UIPickerVie
         }
     }
 
+    @IBAction func tapServer1(_ sender: Any) {
+        serverTeam1.backgroundColor = UIColor.red
+        serverTeam2.backgroundColor = UIColor.clear
+        serverPlayerTeam = "A"
+    }
+    
+    @IBAction func tapServer2(_ sender: Any) {
+        serverTeam1.backgroundColor = UIColor.clear
+        serverTeam2.backgroundColor = UIColor.red
+        serverPlayerTeam = "B"
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

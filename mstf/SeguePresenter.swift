@@ -85,6 +85,29 @@ class SeguePresenter:DelegateProtocol{
                 print("セット数：" + (viewDetailDelegate?.playSetCount.description)!)
                 print("ゲーム数：" + (viewDetailDelegate?.playGameCount.description)!)
             }
+        } else if segue.identifier == "matchYamaguchi" {
+            
+            // 遷移先ViewCntrollerの取得
+            let nextView = segue.destination as! MatchYamaguchiController;
+
+            // 値の設定
+            if delegate != nil{
+                // ViewControllerからスコア集計画面に遷移するボタンが押された場合
+                nextView.inputPlayerName1 = (delegate?.player1.text!)!
+                nextView.inputPlayerName2 = (delegate?.player2.text!)!
+                let dateformatter = DateFormatter()
+                dateformatter.dateFormat = "yyyy/MM/dd"
+                nextView.startDate = dateformatter.string(from: (delegate?.startDate.date)!);
+            }else{
+                // ViewDetailControllerからスコア集計画面に遷移するボタンが押された場合
+                nextView.inputPlayerName1 = (viewDetailDelegate?.receivedPlayer1Name.description)!
+                nextView.inputPlayerName2 = (viewDetailDelegate?.receivedPlayer2Name.description)!
+                nextView.inputPlayerName3 = (viewDetailDelegate?.receivedPlayer3Name.description)!
+                nextView.inputPlayerName4 = (viewDetailDelegate?.receivedPlayer4Name.description)!
+                nextView.serverTeamName = (viewDetailDelegate?.serverPlayerTeam.description)!
+                print("セット数：" + (viewDetailDelegate?.playSetCount.description)!)
+                print("ゲーム数：" + (viewDetailDelegate?.playGameCount.description)!)
+            }
         }
     }
 }

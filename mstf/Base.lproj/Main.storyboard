@@ -87,7 +87,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="山口"/>
                                 <connections>
-                                    <segue destination="zBH-ZV-fKL" kind="show" id="Urh-Cn-Djj"/>
+                                    <segue destination="zBH-ZV-fKL" kind="show" identifier="matchYamaguchi" id="Urh-Cn-Djj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdd-mj-dqv">
@@ -332,6 +332,24 @@
                                     <segue destination="zBH-ZV-fKL" kind="show" identifier="matchYamaguchi" id="A8J-sI-MWi"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hn6-yB-9uQ" userLabel="ServerTeam1">
+                                <rect key="frame" x="45" y="212" width="158" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LDm-J3-x3s" appends="YES" id="QUw-Ua-iQU"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sue-9P-tf3" userLabel="ServerTeam2">
+                                <rect key="frame" x="233" y="212" width="167" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lfh-2R-I8U" appends="YES" id="0tb-23-Box"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SgC-hP-RPj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -344,10 +362,22 @@
                         <outlet property="playerNameOutput2" destination="UUw-zM-Kwa" id="NtH-g8-ITG"/>
                         <outlet property="playerNameOutput3" destination="f1C-WB-u2c" id="WpM-mI-2OQ"/>
                         <outlet property="playerNameOutput4" destination="Rm7-JO-6Xj" id="0Wi-9t-RXe"/>
+                        <outlet property="serverTeam1" destination="Hn6-yB-9uQ" id="zze-Np-IYe"/>
+                        <outlet property="serverTeam2" destination="Sue-9P-tf3" id="jbB-NQ-p3k"/>
                         <outlet property="setSelect" destination="L65-Ww-YsT" id="s1w-wM-k70"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZg-h8-rJv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LDm-J3-x3s">
+                    <connections>
+                        <action selector="tapServer1:" destination="Uq7-TS-xCN" id="q5C-i7-uoC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lfh-2R-I8U">
+                    <connections>
+                        <action selector="tapServer2:" destination="Uq7-TS-xCN" id="XLg-nU-94p"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1837.8504672897195" y="109.50323974082075"/>
         </scene>
