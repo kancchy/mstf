@@ -43,6 +43,10 @@ class Set {
         return gameCount.last!.scoredTeam
     }
     
+    func isDisplaySelectServerPopup() -> Bool{
+        return gameCount.count < 2
+    }
+    
     public func findGame(gameNoLabel gameNo:Int) {
         
     }

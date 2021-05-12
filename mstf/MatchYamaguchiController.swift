@@ -29,6 +29,8 @@ class MatchYamaguchiController: UIViewController {
     var inputPlayerName3 = "";
     var inputPlayerName4 = "";
     var serverTeamName = "";
+    var serverPlayerName1 = "";
+    var serverPlayerName2 = "";
     
     /// 作成したViewのカウンター
     var count:Int = 0
@@ -43,6 +45,7 @@ class MatchYamaguchiController: UIViewController {
         player3Name.text = inputPlayerName3;
         player4Name.text = inputPlayerName4;
         print("serverTeamName: " + serverTeamName)
+        
         // headerのBackが重ならなくなる
         edgesForExtendedLayout = []
         presenter.delegate = self
