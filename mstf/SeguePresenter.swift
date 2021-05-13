@@ -53,18 +53,29 @@ class SeguePresenter:DelegateProtocol{
                 nextView.date = dateformatter.string(from: (delegate?.startDate.date)!);
                 
         } else if segue.identifier == "matchKanda" {
-
             // 遷移先ViewCntrollerの取得
             let nextView = segue.destination as! MatchKandaController;
             // 値の設定
-            nextView.receivedPlayer1Name = (delegate?.player1.text!)!
-            nextView.receivedPlayer2Name = (delegate?.player2.text!)!
-            nextView.receivedPlayer3Name = (delegate?.player3.text!)!
-            nextView.receivedPlayer4Name = (delegate?.player4.text!)!
-            
-            let dateformatter = DateFormatter()
-            dateformatter.dateFormat = "yyyy/MM/dd"
-            nextView.startDate = dateformatter.string(from: (delegate?.startDate.date)!);
+            if delegate != nil{
+                // ViewControllerからスコア集計画面に遷移するボタンが押された場合
+                nextView.receivedPlayer1Name = (delegate?.player1.text!)!
+                nextView.receivedPlayer2Name = (delegate?.player2.text!)!
+                nextView.receivedPlayer3Name = (delegate?.player3.text!)!
+                nextView.receivedPlayer4Name = (delegate?.player4.text!)!
+                
+                let dateformatter = DateFormatter()
+                dateformatter.dateFormat = "yyyy/MM/dd"
+                nextView.startDate = dateformatter.string(from: (delegate?.startDate.date)!);
+            }else{
+                // ViewDetailControllerからスコア集計画面に遷移するボタンが押された場合
+                nextView.receivedPlayer1Name = (viewDetailDelegate?.receivedPlayer1Name.description)!
+                nextView.receivedPlayer2Name = (viewDetailDelegate?.receivedPlayer2Name.description)!
+                nextView.receivedPlayer3Name = (viewDetailDelegate?.receivedPlayer3Name.description)!
+                nextView.receivedPlayer4Name = (viewDetailDelegate?.receivedPlayer4Name.description)!
+                nextView.serverTeamName = (viewDetailDelegate?.serverPlayerTeam.description)!
+                nextView.receivedSetCount = (viewDetailDelegate?.playSetCount.description)!
+                nextView.receivedGameCOunt = (viewDetailDelegate?.playGameCount.description)!
+            }
             
         } else if segue.identifier == "matchTajiri" {
 

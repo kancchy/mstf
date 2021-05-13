@@ -14,6 +14,10 @@ class MatchKandaController: UIViewController {
     var receivedPlayer3Name = "";
     var receivedPlayer4Name = "";
     var startDate = "";
+    var serverTeamName = "";
+    var receivedSetCount = "";
+    var receivedGameCOunt = "";
+
     
     var player1sPoint = "";
     override func viewDidLoad() {
@@ -26,6 +30,8 @@ class MatchKandaController: UIViewController {
         player3Name.text = receivedPlayer3Name;
         player4Name.text = receivedPlayer4Name;
         print("startDate:" + startDate)
+        print("セット数：" + receivedSetCount)
+        print("ゲーム数：" + receivedGameCOunt)
     }
     
     @IBOutlet weak var player1Name: UILabel!
