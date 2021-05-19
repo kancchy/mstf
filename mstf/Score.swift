@@ -37,6 +37,15 @@ class Score {
         }
     }
     
+    // 次のサーバを判定
+    func getNextServerTeam() -> String{
+        if setCount.last!.gameCount.last!.server == "A"{
+            return "B"
+        }else{
+            return "A"
+        }
+    }
+    
     func finish(){
         print("game is over!!!!!!");
     }

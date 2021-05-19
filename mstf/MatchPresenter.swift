@@ -43,25 +43,36 @@ class MatchPresenter:MatchProtocol{
         delegate?.point2Btn.setTitle(dispPoint2, for: .normal)
     }
     
-    func startNewSet(){
-        set = Set();
-        // TODO 5/19 ポップアップを出す
-        
-        
-        self.startNewGame()
+    func startNewSet(serverName:String){
+        set = Set();        
+        self.startNewGame(serverName:serverName)
         // stackViewにnewViewを追加する
         delegate?.team1StackView.addArrangedSubview(createStackViewCell())
         delegate?.team2StackView.addArrangedSubview(createStackViewCell2())
     }
     
-    func startNewGame(){
+    func startNewGame(serverName:String){
         game = Game();
-        // TODO 5/19 セット内2ゲーム目までかどうかを判定し、2ゲーム以内ならばポップアップを出す
-    }
-    
-    // ポップアップを出すメソッド、メソッドの中でチームAかBかを判定する
-    // TODO 5/19 ポップアップを出す
-    func displayPopup(){
+        game.server = serverName
+        
+        // 仮：サーバーチームを色変え
+        if serverName == "A"{
+            delegate?.player1Name.backgroundColor = UIColor.red
+            delegate?.player3Name.backgroundColor = UIColor.red
+            delegate?.player2Name.backgroundColor = UIColor.clear
+            delegate?.player4Name.backgroundColor = UIColor.clear
+        }else{
+            delegate?.player2Name.backgroundColor = UIColor.red
+            delegate?.player4Name.backgroundColor = UIColor.red
+            delegate?.player1Name.backgroundColor = UIColor.clear
+            delegate?.player3Name.backgroundColor = UIColor.clear
+        }
+        
+        // セット内2ゲーム目までかどうかを判定し、2ゲーム以内ならばポップアップを出す
+        if set.isDisplaySelectServerPopup(){
+            // ポップアップ出す場合
+            self.displayPopup(serverTeamName:serverName)
+        }
     }
     
     // ポップアップを出す、引数にチーム名
@@ -88,16 +99,14 @@ class MatchPresenter:MatchProtocol{
           // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
           // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
           // OKボタン
-        let defaultAction: UIAlertAction = UIAlertAction(title: serverPlayerName1, style: UIAlertAction.Style.default, handler:{
+        let defaultAction: UIAlertAction = UIAlertAction(title: serverPlayerName2, style: UIAlertAction.Style.default, handler:{
               // ボタンが押された時の処理を書く（クロージャ実装）
               (action: UIAlertAction!) -> Void in
-              print("OK")
           })
           // キャンセルボタン
-        let cancelAction: UIAlertAction = UIAlertAction(title: serverPlayerName2, style: UIAlertAction.Style.cancel, handler:{
+        let cancelAction: UIAlertAction = UIAlertAction(title: serverPlayerName1, style: UIAlertAction.Style.cancel, handler:{
               // ボタンが押された時の処理を書く（クロージャ実装）
               (action: UIAlertAction!) -> Void in
-              print("Cancel")
           })
 
           // ③ UIAlertControllerにActionを追加
@@ -107,9 +116,6 @@ class MatchPresenter:MatchProtocol{
           // ④ Alertを表示
         delegate?.present(alert, animated: true, completion: nil)
     }
-    
-    
-    
     
     func finishGame(){
  
@@ -129,22 +135,22 @@ class MatchPresenter:MatchProtocol{
             if score.isFinish(teamName: set.findTheNameOfTheTeamThatGotTheSet()){
                 //試合終了
                 score.finish();
-                self.startNewSet()
-
+                // TODO:試合終了ポップアップを出したい
+                self.startNewSet(serverName:"")
             }else{
-                self.startNewSet()
+                self.startNewSet(serverName:score.getNextServerTeam())
             }
         }else{
-            self.startNewGame()
+            self.startNewGame(serverName:set.getNextServerTeam())
         }
     }
     
     func finishScore(){
-           //試合終了
-           score.finish();
-           delegate?.point1Btn.isEnabled = false
-           delegate?.point2Btn.isEnabled = false
-       }
+        //試合終了
+        score.finish();
+        delegate?.point1Btn.isEnabled = false
+        delegate?.point2Btn.isEnabled = false
+    }
     
     func fault(faultTeam: String){
         if game.activePoint.fault {
@@ -153,7 +159,7 @@ class MatchPresenter:MatchProtocol{
             self.scoredPoint(scoredTeam: game.activePoint.scoredTeam)
             return
         }
-        //フォルトフラグ真偽逆転
+        // フォルトフラグ真偽逆転
         game.activePoint.fault = true
     }
     

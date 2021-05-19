@@ -13,7 +13,6 @@ class Set {
     private (set) var breakGames:[Int]? ;
     private (set) var gameNumOneSet:Int = 6 ;
 
-    
     func scored(game:Game?){
         gameCount.append(game!);
         let teamName = game?.findTheNameOfTheTeamThatGotTheGame()
@@ -43,8 +42,23 @@ class Set {
         return gameCount.last!.scoredTeam
     }
     
+    // ポップアップを表示するゲーム数を判定
     func isDisplaySelectServerPopup() -> Bool{
         return gameCount.count < 2
+    }
+    
+    //　最後にサーバしたチームを取得
+    func getLastServerTeam() -> String{
+        return gameCount.last!.server
+    }
+    
+    // 次のサーバチームを取得
+    func getNextServerTeam() -> String{
+        if gameCount.last!.server == "A"{
+            return "B"
+        }else{
+            return "A"
+        }
     }
     
     public func findGame(gameNoLabel gameNo:Int) {

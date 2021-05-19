@@ -50,7 +50,7 @@ class MatchYamaguchiController: UIViewController {
         edgesForExtendedLayout = []
         presenter.delegate = self
         print(supportedInterfaceOrientations)
-        presenter.startNewSet()
+        presenter.startNewSet(serverName:serverTeamName)
         // Do any additional setup after loading the view.
     }
     
@@ -76,7 +76,7 @@ class MatchYamaguchiController: UIViewController {
     */
     @IBAction func clearGamePoint(_ sender: Any) {
         // プレゼンターの呼び出し
-        presenter.startNewGame()
+        presenter.startNewGame(serverName:"")
         presenter.changeButtonLabel()
     }
     
