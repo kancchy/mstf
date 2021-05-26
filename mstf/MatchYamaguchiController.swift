@@ -14,7 +14,8 @@ class MatchYamaguchiController: MatchParentController {
     @IBOutlet weak var player3Name: UILabel!
     @IBOutlet weak var player4Name: UILabel!
     @IBOutlet weak var clearBtn: UIButton!
-    @IBOutlet weak var faultBtn: UIButton!
+    @IBOutlet weak var fault1Btn: UIButton!
+    @IBOutlet weak var fault2Btn: UIButton!
     @IBOutlet weak var point1Btn: UIButton!
     @IBOutlet weak var point2Btn: UIButton!
     @IBOutlet weak var score: UILabel!
@@ -41,7 +42,8 @@ class MatchYamaguchiController: MatchParentController {
         super.player3NameParent = self.player3Name
         super.player4NameParent = self.player4Name
         super.clearBtnParent = self.clearBtn
-        super.faultBtnParent = self.faultBtn
+        super.fault1BtnParent = self.fault1Btn
+        super.fault2BtnParent = self.fault2Btn
         super.point1BtnParent = self.point1Btn
         super.point2BtnParent = self.point2Btn
         super.scoreParent = self.score

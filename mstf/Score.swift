@@ -13,7 +13,7 @@ class Score {
     private (set) var setCount:[Set] = [];
     private (set) var numberOfSetsForTeamA:Int = 0 ;
     private (set) var numberOfSetsForTeamB:Int = 0 ;
-    private (set) var setNumOneScore:Int = 1 ;
+    private (set) var setNumOneScore:Int = 3 ;
 
     func scored(set:Set?){
         setCount.append(set!);

@@ -18,7 +18,8 @@ class MatchParentController: UIViewController {
     var player3NameParent: UILabel!
     var player4NameParent: UILabel!
     var clearBtnParent: UIButton!
-    var faultBtnParent: UIButton!
+    var fault1BtnParent: UIButton!
+    var fault2BtnParent: UIButton!
     var point1BtnParent: UIButton!
     var point2BtnParent: UIButton!
     var scoreParent: UILabel!

@@ -136,10 +136,15 @@ class MatchPresenter:MatchProtocol{
         if set.isFinish(teamName: game.findTheNameOfTheTeamThatGotTheGame()) {
             score.scored(set: set);
             if score.isFinish(teamName: set.findTheNameOfTheTeamThatGotTheSet()){
-                //試合終了
-                score.finish();
+                // 試合終了
+                finishScore();
+
+                // ポイント数の初期化と画面反映
+                game = Game();
+                self.changeButtonLabel()
+
                 // TODO:試合終了ポップアップを出したい
-                self.startNewSet(serverName:"")
+                return
             }else{
                 self.startNewSet(serverName:score.getNextServerTeam())
             }
@@ -153,6 +158,8 @@ class MatchPresenter:MatchProtocol{
         score.finish();
         delegate?.point1BtnParent.isEnabled = false
         delegate?.point2BtnParent.isEnabled = false
+        delegate?.fault1BtnParent.isEnabled = false
+        delegate?.fault2BtnParent.isEnabled = false
     }
     
     func fault(faultTeam: String){
@@ -169,7 +176,11 @@ class MatchPresenter:MatchProtocol{
     // フォルトボタンの非活性化
     func hiddenFaultBtn(){
         if game.server == "B"{
-            delegate?.faultBtnParent.isEnabled = false
+            delegate?.fault1BtnParent.isEnabled = false
+            delegate?.fault2BtnParent.isEnabled = true
+        }else{
+            delegate?.fault1BtnParent.isEnabled = true
+            delegate?.fault2BtnParent.isEnabled = false
         }
     }
     

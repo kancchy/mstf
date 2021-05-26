@@ -43,7 +43,8 @@ class MatchTajiriController: MatchParentController {
         super.player3NameParent = UILabel()
         super.player4NameParent = UILabel()
         super.clearBtnParent = self.clearBtn
-        super.faultBtnParent = UIButton()
+        super.fault1BtnParent = UIButton()
+        super.fault2BtnParent = UIButton()
         super.point1BtnParent = self.point1Btn
         super.point2BtnParent = self.point2Btn
         super.scoreParent = UILabel()
