@@ -92,31 +92,31 @@ class MatchPresenter:MatchProtocol{
     
     func displaySelectServerPopup(serverPlayerName1:String,serverPlayerName2:String){
         // ① UIAlertControllerクラスのインスタンスを生成
-          // タイトル, メッセージ, Alertのスタイルを指定する
-          // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
+        // タイトル, メッセージ, Alertのスタイルを指定する
+        // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
         let alert: UIAlertController = UIAlertController(title: "サーバー選択", message: "どなたがサーブを打ちますか？", preferredStyle:  UIAlertController.Style.alert)
-          // ② Actionの設定
-          // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
-          // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
-          // OKボタン
-        let defaultAction: UIAlertAction = UIAlertAction(title: serverPlayerName2, style: UIAlertAction.Style.default, handler:{
-              // ボタンが押された時の処理を書く（クロージャ実装）
-              (action: UIAlertAction!) -> Void in
-          })
-          // キャンセルボタン
-        let cancelAction: UIAlertAction = UIAlertAction(title: serverPlayerName1, style: UIAlertAction.Style.cancel, handler:{
-              // ボタンが押された時の処理を書く（クロージャ実装）
-              (action: UIAlertAction!) -> Void in
-          })
+        // ② Actionの設定
+        // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
+        // 第3引数のUIAlertActionStyleでボタンのスタイルを指定する
+        // OKボタン（左）
+        let defaultAction: UIAlertAction = UIAlertAction(title: serverPlayerName2, style: UIAlertAction.Style.default, handler:{(action: UIAlertAction!) -> Void in
+            // ボタンが押された時の処理
+            self.game.serverPlayerName = serverPlayerName2
+        })
+        // キャンセルボタン（右）
+        let cancelAction: UIAlertAction = UIAlertAction(title: serverPlayerName1, style: UIAlertAction.Style.cancel, handler:{(action: UIAlertAction!) -> Void in
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            self.game.serverPlayerName = serverPlayerName1
+        })
 
-          // ③ UIAlertControllerにActionを追加
-          alert.addAction(cancelAction)
-          alert.addAction(defaultAction)
+        // ③ UIAlertControllerにActionを追加
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
 
-          // ④ Alertを表示
+        // ④ Alertを表示
         delegate?.present(alert, animated: true, completion: nil)
     }
-    
+
     func finishGame(){
  
         set.scored(game: game);

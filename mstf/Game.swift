@@ -13,6 +13,7 @@ class Game{
     private (set) var gamePointCountTeamB:Int = 0;
     // サーバ/レシーバーにはチーム名が入る
     public var server:String = "" ;
+    public var serverPlayerName:String = "" ;
     private (set) var reciever:String? ;
     var activePoint:GamePoint = GamePoint();
     
