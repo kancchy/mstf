@@ -66,30 +66,6 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <locale key="locale" localeIdentifier="ja"/>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7F-g4-mPC">
-                                <rect key="frame" x="132" y="588" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="田尻様！"/>
-                                <connections>
-                                    <segue destination="Wgp-Xv-O7Y" kind="show" identifier="matchTajiri" id="n8c-WG-0q5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzU-0x-vwQ">
-                                <rect key="frame" x="243" y="588" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="かんだ"/>
-                                <connections>
-                                    <segue destination="Zh0-wf-hWs" kind="show" identifier="matchKanda" id="Nlf-s3-TkF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-L5-cKy">
-                                <rect key="frame" x="198" y="615" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="山口"/>
-                                <connections>
-                                    <segue destination="zBH-ZV-fKL" kind="show" identifier="matchYamaguchi" id="Urh-Cn-Djj"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdd-mj-dqv">
                                 <rect key="frame" x="152" y="512" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -382,11 +358,6 @@
             <point key="canvasLocation" x="1837.8504672897195" y="109.50323974082075"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="A8J-sI-MWi"/>
-        <segue reference="nB9-dc-qPS"/>
-        <segue reference="olw-Y6-uH5"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
