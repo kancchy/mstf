@@ -23,8 +23,6 @@ class MatchTajiriController: MatchParentController {
     //var inputPlayerName2 = "";
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
         player1Name.text = inputPlayerName1;
         player2Name.text = inputPlayerName2;
         
@@ -39,33 +37,51 @@ class MatchTajiriController: MatchParentController {
         self.point1Btn.layer.cornerRadius = 20.0
         self.point2Btn.layer.cornerRadius = 20.0
         print(supportedInterfaceOrientations)
-
+        
+        super.player1NameParent = self.player1Name
+        super.player2NameParent = self.player2Name
+        super.player3NameParent = UILabel()
+        super.player4NameParent = UILabel()
+        super.clearBtnParent = self.clearBtn
+        super.faultBtnParent = UIButton()
+        super.point1BtnParent = self.point1Btn
+        super.point2BtnParent = self.point2Btn
+        super.scoreParent = UILabel()
+        super.team1NameParent = self.team1Name
+        super.team2NameParent = self.team2Name
+        super.team1StackViewParent = UIStackView()
+        super.team2StackViewParent = UIStackView()
+        
+        super.viewDidLoad()
     }
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        //左横画面に変更
-        if(UIDevice.current.orientation.rawValue == 4){
-            UIDevice.current.setValue(4, forKey: "orientation")
-            return .landscapeLeft
-        }
-        //左横画面以外の処理
-        else {
-            //最初の画面呼び出しで画面を右横画面に変更させる。
-            UIDevice.current.setValue(3, forKey: "orientation")
-            return .landscapeRight
-        }
+    @IBAction func pushPoint1(_ sender: Any) {
+        // プレゼンターの呼び出し
+        presenter.scoredPoint(scoredTeam: "A")
+        presenter.changeButtonLabel()
     }
-
-    // 画面を自動で回転させるかを決定する。
-    override var shouldAutorotate: Bool {
-        //画面が縦だった場合は回転させない
-        if(UIDevice.current.orientation.rawValue == 1){
-            print(supportedInterfaceOrientations)
-            return false
-        }
-        else{
-            return true
-        }
+    
+    @IBAction func pushPoint2(_ sender: Any) {
+        // プレゼンターの呼び出し
+        presenter.scoredPoint(scoredTeam: "B")
+        presenter.changeButtonLabel()
     }
-
+    
+    @IBAction func clearGamePoint(_ sender: Any) {
+        // プレゼンターの呼び出し
+        presenter.startNewGame(serverName:"")
+        presenter.changeButtonLabel()
+    }
+    
+    @IBAction func pushFault1(_ sender: Any) {
+        presenter.fault(faultTeam: "A")
+        presenter.changeButtonLabel()
+    }
+    
+    @IBAction func pushFault2(_ sender: Any) {
+        presenter.fault(faultTeam: "B")
+        presenter.changeButtonLabel()
+    }
+    
+    
 }

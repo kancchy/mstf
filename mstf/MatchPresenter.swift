@@ -40,7 +40,7 @@ class MatchPresenter:MatchProtocol{
         let dispPoint1 = game.cnvPoint(point:game.gamePointCountTeamA)
         let dispPoint2 = game.cnvPoint(point:game.gamePointCountTeamB)
         delegate?.point1BtnParent.setTitle(dispPoint1, for: .normal)
-        delegate?.point1BtnParent.setTitle(dispPoint2, for: .normal)
+        delegate?.point2BtnParent.setTitle(dispPoint2, for: .normal)
     }
     
     func startNewSet(serverName:String){
@@ -67,6 +67,8 @@ class MatchPresenter:MatchProtocol{
             delegate?.player1NameParent.backgroundColor = UIColor.clear
             delegate?.player3NameParent.backgroundColor = UIColor.clear
         }
+        
+        hiddenFaultBtn()
         
         // セット内2ゲーム目までかどうかを判定し、2ゲーム以内ならばポップアップを出す
         if set.isDisplaySelectServerPopup(){
@@ -162,6 +164,13 @@ class MatchPresenter:MatchProtocol{
         }
         // フォルトフラグ真偽逆転
         game.activePoint.fault = true
+    }
+    
+    // フォルトボタンの非活性化
+    func hiddenFaultBtn(){
+        if game.server == "B"{
+            delegate?.faultBtnParent.isEnabled = false
+        }
     }
     
     func createStackViewCell() -> UIView {
