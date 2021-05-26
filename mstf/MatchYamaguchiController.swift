@@ -7,14 +7,14 @@
 
 import UIKit
 
-class MatchYamaguchiController: UIViewController {
+class MatchYamaguchiController: MatchParentController {
 
     @IBOutlet weak var player1Name: UILabel!
     @IBOutlet weak var player2Name: UILabel!
     @IBOutlet weak var player3Name: UILabel!
     @IBOutlet weak var player4Name: UILabel!
     @IBOutlet weak var clearBtn: UIButton!
-    @IBOutlet weak var faulttn: UIButton!
+    @IBOutlet weak var faultBtn: UIButton!
     @IBOutlet weak var point1Btn: UIButton!
     @IBOutlet weak var point2Btn: UIButton!
     @IBOutlet weak var score: UILabel!
@@ -23,34 +23,34 @@ class MatchYamaguchiController: UIViewController {
     
     @IBOutlet weak var team1StackView: UIStackView!
     @IBOutlet weak var team2StackView: UIStackView!
-    var startDate = "";
-    var inputPlayerName1 = "";
-    var inputPlayerName2 = "";
-    var inputPlayerName3 = "";
-    var inputPlayerName4 = "";
-    var serverTeamName = "";
-    var serverPlayerName1 = "";
-    var serverPlayerName2 = "";
-    
+
     /// 作成したViewのカウンター
     var count:Int = 0
-    
-    // プレゼンターの初期化
-    let presenter = MatchPresenter()
-    
+        
     override func viewDidLoad() {
-        super.viewDidLoad()
         player1Name.text = inputPlayerName1;
         player2Name.text = inputPlayerName2;
         player3Name.text = inputPlayerName3;
         player4Name.text = inputPlayerName4;
         print("serverTeamName: " + serverTeamName)
-        
-        // headerのBackが重ならなくなる
-        edgesForExtendedLayout = []
-        presenter.delegate = self
+    
         print(supportedInterfaceOrientations)
-        presenter.startNewSet(serverName:serverTeamName)
+
+        super.player1NameParent = self.player1Name
+        super.player2NameParent = self.player2Name
+        super.player3NameParent = self.player3Name
+        super.player4NameParent = self.player4Name
+        super.clearBtnParent = self.clearBtn
+        super.faultBtnParent = self.faultBtn
+        super.point1BtnParent = self.point1Btn
+        super.point2BtnParent = self.point2Btn
+        super.scoreParent = self.score
+        super.team1NameParent = self.team1Name
+        super.team2NameParent = self.team2Name
+        super.team1StackViewParent = self.team1StackView
+        super.team2StackViewParent = self.team2StackView
+
+        super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     

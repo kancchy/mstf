@@ -7,14 +7,14 @@
 
 import UIKit
 
-class MatchKandaController: UIViewController {
+class MatchKandaController: MatchParentController {
 
     var receivedPlayer1Name = "";
     var receivedPlayer2Name = "";
     var receivedPlayer3Name = "";
     var receivedPlayer4Name = "";
-    var startDate = "";
-    var serverTeamName = "";
+    //var startDate = "";
+    //var serverTeamName = "";
     var receivedSetCount = "";
     var receivedGameCOunt = "";
 
@@ -22,8 +22,6 @@ class MatchKandaController: UIViewController {
     var player1sPoint = "";
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        edgesForExtendedLayout = []
         
         player1Name.text = receivedPlayer1Name;
         player2Name.text = receivedPlayer2Name;

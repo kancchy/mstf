@@ -147,7 +147,7 @@
                     </view>
                     <connections>
                         <outlet property="clearBtn" destination="8dF-BT-1g5" id="0uV-oI-vDB"/>
-                        <outlet property="faulttn" destination="clM-OI-DRa" id="OH8-Vg-ym5"/>
+                        <outlet property="faultBtn" destination="clM-OI-DRa" id="KeM-IR-Wol"/>
                         <outlet property="player1Name" destination="PRd-Qy-tOb" id="k1d-03-pH2"/>
                         <outlet property="player2Name" destination="sdW-bs-SMn" id="Bws-bn-eUP"/>
                         <outlet property="player3Name" destination="L7k-Nd-l0p" id="Gy6-Fs-BNl"/>

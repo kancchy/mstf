@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MatchTajiriController: UIViewController {
+class MatchTajiriController: MatchParentController {
 
     @IBOutlet weak var team1Name: UILabel!
     @IBOutlet weak var team2Name: UILabel!
@@ -18,14 +18,12 @@ class MatchTajiriController: UIViewController {
     @IBOutlet weak var fault1Btn: UIButton!
     @IBOutlet weak var fault2Btn: UIButton!
     @IBOutlet weak var clearBtn: UIButton!
-    var startDate = "";
-    var inputPlayerName1 = "";
-    var inputPlayerName2 = "";
+    //var startDate = "";
+    //var inputPlayerName1 = "";
+    //var inputPlayerName2 = "";
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        edgesForExtendedLayout = []
         
         player1Name.text = inputPlayerName1;
         player2Name.text = inputPlayerName2;

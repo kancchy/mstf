@@ -18,7 +18,7 @@ extension MatchProtocol{
 }
 
 class MatchPresenter:MatchProtocol{
-    var delegate:MatchYamaguchiController? = nil;
+    var delegate:MatchParentController? = nil;
     var game:Game = Game();
     var set:Set = Set();
     var score:Score = Score();
@@ -39,16 +39,16 @@ class MatchPresenter:MatchProtocol{
     func changeButtonLabel(){
         let dispPoint1 = game.cnvPoint(point:game.gamePointCountTeamA)
         let dispPoint2 = game.cnvPoint(point:game.gamePointCountTeamB)
-        delegate?.point1Btn.setTitle(dispPoint1, for: .normal)
-        delegate?.point2Btn.setTitle(dispPoint2, for: .normal)
+        delegate?.point1BtnParent.setTitle(dispPoint1, for: .normal)
+        delegate?.point1BtnParent.setTitle(dispPoint2, for: .normal)
     }
     
     func startNewSet(serverName:String){
         set = Set();        
         self.startNewGame(serverName:serverName)
         // stackViewにnewViewを追加する
-        delegate?.team1StackView.addArrangedSubview(createStackViewCell())
-        delegate?.team2StackView.addArrangedSubview(createStackViewCell2())
+        delegate?.team1StackViewParent.addArrangedSubview(createStackViewCell())
+        delegate?.team2StackViewParent.addArrangedSubview(createStackViewCell2())
     }
     
     func startNewGame(serverName:String){
@@ -57,15 +57,15 @@ class MatchPresenter:MatchProtocol{
         
         // 仮：サーバーチームを色変え
         if serverName == "A"{
-            delegate?.player1Name.backgroundColor = UIColor.red
-            delegate?.player3Name.backgroundColor = UIColor.red
-            delegate?.player2Name.backgroundColor = UIColor.clear
-            delegate?.player4Name.backgroundColor = UIColor.clear
+            delegate?.player1NameParent.backgroundColor = UIColor.red
+            delegate?.player3NameParent.backgroundColor = UIColor.red
+            delegate?.player2NameParent.backgroundColor = UIColor.clear
+            delegate?.player4NameParent.backgroundColor = UIColor.clear
         }else{
-            delegate?.player2Name.backgroundColor = UIColor.red
-            delegate?.player4Name.backgroundColor = UIColor.red
-            delegate?.player1Name.backgroundColor = UIColor.clear
-            delegate?.player3Name.backgroundColor = UIColor.clear
+            delegate?.player2NameParent.backgroundColor = UIColor.red
+            delegate?.player4NameParent.backgroundColor = UIColor.red
+            delegate?.player1NameParent.backgroundColor = UIColor.clear
+            delegate?.player3NameParent.backgroundColor = UIColor.clear
         }
         
         // セット内2ゲーム目までかどうかを判定し、2ゲーム以内ならばポップアップを出す
@@ -73,6 +73,7 @@ class MatchPresenter:MatchProtocol{
             // ポップアップ出す場合
             self.displayPopup(serverTeamName:serverName)
         }
+
     }
     
     // ポップアップを出す、引数にチーム名
@@ -123,10 +124,10 @@ class MatchPresenter:MatchProtocol{
         print("set is finish:" + set.isFinish(teamName: game.findTheNameOfTheTeamThatGotTheGame()).description);
         
         // 画面にゲームを反映
-        var nowSet:UIView?  = delegate?.team1StackView.subviews.last
+        var nowSet:UIView?  = delegate?.team1StackViewParent.subviews.last
         var testLabel: UILabel?  = nowSet!.subviews.first as? UILabel
         testLabel?.text = "\(set.numberOfGamesForTeamA)"
-        nowSet = delegate?.team2StackView.subviews.last
+        nowSet = delegate?.team2StackViewParent.subviews.last
         testLabel  = nowSet!.subviews.first as? UILabel
         testLabel?.text = "\(set.numberOfGamesForTeamB)"
         
@@ -148,8 +149,8 @@ class MatchPresenter:MatchProtocol{
     func finishScore(){
         //試合終了
         score.finish();
-        delegate?.point1Btn.isEnabled = false
-        delegate?.point2Btn.isEnabled = false
+        delegate?.point1BtnParent.isEnabled = false
+        delegate?.point2BtnParent.isEnabled = false
     }
     
     func fault(faultTeam: String){
