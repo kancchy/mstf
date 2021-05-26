@@ -21,6 +21,7 @@
 		753F2E04260B6A22004BF21C /* MatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753F2E03260B6A22004BF21C /* MatchPresenter.swift */; };
 		75882E6825EFA38C00BE4DAC /* MatchYamaguchi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75882E6725EFA38C00BE4DAC /* MatchYamaguchi.storyboard */; };
 		75882E6D25EFA3CC00BE4DAC /* MatchYamaguchiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75882E6C25EFA3CC00BE4DAC /* MatchYamaguchiController.swift */; };
+		AE510590265E8B2D00E1CDCE /* MatchScreenOperationsParentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51058F265E8B2D00E1CDCE /* MatchScreenOperationsParentPresenter.swift */; };
 		AE66A7C025B83C11002891F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66A7BF25B83C11002891F4 /* AppDelegate.swift */; };
 		AE66A7C225B83C11002891F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66A7C125B83C11002891F4 /* SceneDelegate.swift */; };
 		AE66A7C425B83C11002891F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66A7C325B83C11002891F4 /* ViewController.swift */; };
@@ -72,6 +73,7 @@
 		753F2E03260B6A22004BF21C /* MatchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPresenter.swift; sourceTree = "<group>"; };
 		75882E6725EFA38C00BE4DAC /* MatchYamaguchi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchYamaguchi.storyboard; sourceTree = "<group>"; };
 		75882E6C25EFA3CC00BE4DAC /* MatchYamaguchiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchYamaguchiController.swift; sourceTree = "<group>"; };
+		AE51058F265E8B2D00E1CDCE /* MatchScreenOperationsParentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchScreenOperationsParentPresenter.swift; sourceTree = "<group>"; };
 		AE66A7BC25B83C11002891F4 /* mstf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mstf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE66A7BF25B83C11002891F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE66A7C125B83C11002891F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				54DB7C6C25E6608A001330CE /* SeguePresenter.swift */,
 				753F2E03260B6A22004BF21C /* MatchPresenter.swift */,
+				AE51058F265E8B2D00E1CDCE /* MatchScreenOperationsParentPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				54DB7C8A25F8D715001330CE /* Game.swift in Sources */,
 				54C30B7B25CABCE700F61D37 /* MatchTajiriController.swift in Sources */,
 				7520139A25F8D9B30027B482 /* GamePointForTieBreak.swift in Sources */,
+				AE510590265E8B2D00E1CDCE /* MatchScreenOperationsParentPresenter.swift in Sources */,
 				7520139225F8D6EE0027B482 /* Constant.swift in Sources */,
 				AEA3D25A25F8E9F800E00931 /* Set.swift in Sources */,
 				54E0D5F026398CD5005F647F /* ViewDetailController.swift in Sources */,

@@ -55,6 +55,9 @@ class MatchParentController: UIViewController {
         edgesForExtendedLayout = []
         
         presenter.delegate = self
+        presenter.screenOperator = MatchScreenOperationsParentPresenter();
+        presenter.screenOperator?.delegate = self
+        
         presenter.startNewSet(serverName:serverTeamName)
     }
 
