@@ -9,10 +9,6 @@ import UIKit
 
 class MatchParentController: UIViewController {
 
-//    var player1Name = "";
-//    var player2Name = "";
-//    var player3Name = "";
-//    var player4Name = "";
     var player1NameParent: UILabel!
     var player2NameParent: UILabel!
     var player3NameParent: UILabel!
@@ -38,26 +34,22 @@ class MatchParentController: UIViewController {
     var serverPlayerName1 = "";
     var serverPlayerName2 = "";
     var date = "";
-    
+    var singlesFlag = false;
+
     // プレゼンターの初期化
     let presenter = MatchPresenter()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        player1.text = player1Name
-//        player2.text = player2Name
-//        player3.text = player3Name
-//        player4.text = player4Name
-        //dateLabel.text = date
-        
+
         // headerのBackが重ならなくなる
         edgesForExtendedLayout = []
-        
+
         presenter.delegate = self
         presenter.screenOperator = MatchScreenOperationsParentPresenter();
         presenter.screenOperator?.delegate = self
-        
+
         presenter.startNewSet(serverName:serverTeamName)
     }
 

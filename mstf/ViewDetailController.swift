@@ -32,6 +32,9 @@ class ViewDetailController: UIViewController , UIPickerViewDelegate, UIPickerVie
     var serverPlayerTeam = "";
     var playSetCount = 0;
     var playGameCount = 0;
+
+    // シングルスフラグ（入力プレイヤー数で判定）
+    var singlesFlag = true;
     
     // プレゼンターの初期化
     let present = SeguePresenter()
@@ -105,8 +108,13 @@ class ViewDetailController: UIViewController , UIPickerViewDelegate, UIPickerVie
         dateOutput.text = startDate
         playerNameOutput1.setTitle(receivedPlayer1Name, for: .normal)
         playerNameOutput2.setTitle(receivedPlayer2Name, for: .normal)
-        playerNameOutput3.setTitle(receivedPlayer3Name, for: .normal)
-        playerNameOutput4.setTitle(receivedPlayer4Name, for: .normal)
+        
+        if receivedPlayer3Name != "" && receivedPlayer4Name != ""{
+            // ダブルス
+            playerNameOutput3.setTitle(receivedPlayer3Name, for: .normal)
+            playerNameOutput4.setTitle(receivedPlayer4Name, for: .normal)
+            singlesFlag = false;
+        }
     }
     
     @IBAction func pushButton1(_ sender: Any) {

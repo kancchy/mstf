@@ -42,11 +42,6 @@ class SeguePresenter:DelegateProtocol{
 
             // 遷移先ViewCntrollerの取得
             let nextView = segue.destination as! MatchParentController;
-            // 値の設定
-            //nextView.player1Name = (delegate?.player1.text!)!
-            //nextView.player2Name = (delegate?.player2.text!)!
-            //nextView.player3Name = (delegate?.player3.text!)!
-            //nextView.player4Name = (delegate?.player4.text!)!
                 
             let dateformatter = DateFormatter()
             dateformatter.dateFormat = "yyyy/MM/dd"
@@ -68,6 +63,7 @@ class SeguePresenter:DelegateProtocol{
             let nextView = segue.destination as! MatchTajiriController;
 
             nextView.inputPlayerName1 = (viewDetailDelegate?.serverPlayerName.description)!
+            nextView.singlesFlag = (viewDetailDelegate?.singlesFlag)!
             print("セット数：" + (viewDetailDelegate?.playSetCount.description)!)
             print("ゲーム数：" + (viewDetailDelegate?.playGameCount.description)!)
         } else if segue.identifier == "matchYamaguchi" {
@@ -80,6 +76,7 @@ class SeguePresenter:DelegateProtocol{
                 nextView.inputPlayerName3 = (viewDetailDelegate?.receivedPlayer3Name.description)!
                 nextView.inputPlayerName4 = (viewDetailDelegate?.receivedPlayer4Name.description)!
                 nextView.serverTeamName = (viewDetailDelegate?.serverPlayerTeam.description)!
+                nextView.singlesFlag = (viewDetailDelegate?.singlesFlag)!
                 print("セット数：" + (viewDetailDelegate?.playSetCount.description)!)
                 print("ゲーム数：" + (viewDetailDelegate?.playGameCount.description)!)
         }
