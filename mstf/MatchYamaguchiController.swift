@@ -79,12 +79,10 @@ class MatchYamaguchiController: MatchParentController {
     @IBAction func clearGamePoint(_ sender: Any) {
         // プレゼンターの呼び出し
         presenter.startNewGame(serverName:"")
-        presenter.changeButtonLabel()
     }
     
     @IBAction func pushFault1(_ sender: Any) {
         presenter.fault(faultTeam: "A")
-        presenter.changeButtonLabel()
     }
     
     @IBAction func pushFault2(_ sender: Any) {

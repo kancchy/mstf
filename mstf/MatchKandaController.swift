@@ -7,26 +7,40 @@
 
 import UIKit
 
-class MatchKandaController: MatchParentController {
+class MatchKandaController : MatchParentController {
 
-    var receivedPlayer1Name = "";
-    var receivedPlayer2Name = "";
-    var receivedPlayer3Name = "";
-    var receivedPlayer4Name = "";
     //var startDate = "";
     //var serverTeamName = "";
     var receivedSetCount = "";
     var receivedGameCOunt = "";
 
-    
-    var player1sPoint = "";
     override func viewDidLoad() {
-        super.viewDidLoad()
+        player1Name.text = inputPlayerName1;
+        player2Name.text = inputPlayerName2;
+        player3Name.text = inputPlayerName3;
+        player4Name.text = inputPlayerName4;
         
-        player1Name.text = receivedPlayer1Name;
-        player2Name.text = receivedPlayer2Name;
-        player3Name.text = receivedPlayer3Name;
-        player4Name.text = receivedPlayer4Name;
+        super.player1NameParent = self.player1Name
+        super.player2NameParent = self.player2Name
+        super.player3NameParent = self.player3Name
+        super.player4NameParent = self.player4Name
+        
+        super.leftGameNumParent = self.leftGameNum
+        super.rightGameNumParent = self.rightGameNum
+        super.leftSetNumParent = self.leftSetNum
+        super.rightSetNumParent = self.rightSetNum
+        super.leftGameLineParent = self.leftGameLine
+        super.rightGameLineParent = self.rightGameLine
+        super.fault2BtnParent = self.rightFoultBtn
+        super.fault1BtnParent = self.leftFoultBtn
+
+
+        // 作らなきゃいけないもの
+//        super.clearBtnParent = self.clearBtn
+//        super.fault1BtnParent = self.fault1Btn
+//        super.fault2BtnParent = self.fault2Btn
+        super.viewDidLoad()
+
         print("startDate:" + startDate)
         print("セット数：" + receivedSetCount)
         print("ゲーム数：" + receivedGameCOunt)
@@ -44,90 +58,44 @@ class MatchKandaController: MatchParentController {
     
     @IBOutlet weak var leftGameLine: UIStackView!
     @IBOutlet weak var rightGameLine: UIStackView!
-    /// 作成したViewのカウンター
-    var count:Int = 0
-    
+    @IBOutlet weak var rightFoultBtn: UIButton!
+    @IBOutlet weak var leftFoultBtn: UIButton!
     
     @IBAction func tapLeftView(_ sender: Any) {
         print("tap Left View")
-        // stackViewにnewViewを追加する
-        leftGameLine.addArrangedSubview(createStackViewCell())
-
-        rightGameLine.addArrangedSubview(createStackViewCell2())
-        
+        // プレゼンターの呼び出し
+        presenter.scoredPoint(scoredTeam: "A")
+        presenter.changeButtonLabel()
     }
     @IBAction func tapRightView(_ sender: Any) {
         print("tap Right View")
-        leftGameLine.addArrangedSubview(createStackViewCell())
-
-        rightGameLine.addArrangedSubview(createStackViewCell2())
-        
+        // プレゼンターの呼び出し
+        presenter.scoredPoint(scoredTeam: "B")
+        presenter.changeButtonLabel()
     }
     
-    @IBAction func pushFoultBtn(_ sender: Any) {
-        print("tap Btn")
-
-        // stackViewにnewViewを追加する
-        leftGameLine.addArrangedSubview(createStackViewCell())
-
-        rightGameLine.addArrangedSubview(createStackViewCell2())
+    @IBAction func pushLeftFoultBtn(_ sender: Any) {
+        presenter.fault(faultTeam: "A")
+    }
+    @IBAction func pushRightFoultBtn(_ sender: Any) {
+        presenter.fault(faultTeam: "B")
     }
     
     @IBAction func tapLeftFirstBtn(_ sender: Any) {
-        leftGameLine.addArrangedSubview(createStackViewCell())
-
-        rightGameLine.addArrangedSubview(createStackViewCell2())
+        presenter.scoredPoint(scoredTeam: "A")
+        presenter.changeButtonLabel()
     }
     
     @IBAction func tapRightFirstBtn(_ sender: Any) {
-
-        rightGameLine.addArrangedSubview(createStackViewCell2())
-
-        leftGameLine.addArrangedSubview(createStackViewCell())
+        presenter.scoredPoint(scoredTeam: "B")
+        presenter.changeButtonLabel()
     }
     
-    func createStackViewCell() -> UIView {
-        // 新規追加するViewを作成
-        let newView = UIView()
-        let label = UILabel()
-        newView.addSubview(label);
-        // 背景を緑に設定
-        newView.backgroundColor = UIColor.green
-        // 枠線を設定
-        newView.layer.borderColor = UIColor.black.cgColor
-        newView.layer.borderWidth = 1.0
-        // 追加されたViewがわかりやすいように、ナンバリング
-        label.text = "\(count)"
-        label.sizeToFit()
-        label.textColor = UIColor.black
-        // ナンバリング用のカウンタをインクリメント
-        count += 1
-        // 新規Viewに height=100 の制約を追加 ←【超重要】
-        newView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
-        newView.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
-        newView.translatesAutoresizingMaskIntoConstraints = false
-        return newView;
-    }
-    
-    func createStackViewCell2() -> UIView {
-        // 新規追加するViewを作成
-        let newView = UIView()
-        let label = UILabel()
-        newView.addSubview(label);
-        // 背景を緑に設定
-        newView.backgroundColor = UIColor.yellow
-        // 枠線を設定
-        newView.layer.borderColor = UIColor.black.cgColor
-        newView.layer.borderWidth = 1.0
-        // 追加されたViewがわかりやすいように、ナンバリング
-        label.text = "\(count)"
-        label.sizeToFit()
-        label.textColor = UIColor.black
-        // ナンバリング用のカウンタをインクリメント
-        count += 1
-        // 新規Viewに height=100 の制約を追加 ←【超重要】
-        newView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
-        newView.translatesAutoresizingMaskIntoConstraints = false
-        return newView;
+    override func presenterInit() {
+        presenter.delegate = self
+        presenter.screenOperator = VerticalMatchScreenOperationsPresenter();
+        presenter.screenOperator?.delegate = self
+        
+        presenter.startNewSet(serverName:serverTeamName)
     }
 }

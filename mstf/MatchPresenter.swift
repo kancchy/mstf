@@ -44,7 +44,7 @@ class MatchPresenter:MatchProtocol{
     func startNewSet(serverName:String){
         set = Set();        
         self.startNewGame(serverName:serverName)
-        screenOperator?.addSetCount(serverName: serverName);
+        screenOperator?.addSetCount(score:score);
     }
     
     func startNewGame(serverName:String){
@@ -143,6 +143,7 @@ class MatchPresenter:MatchProtocol{
             // ポイント加算
             game.activePoint.scoredTeam = faultTeam == "A" ? "B" : "A"
             self.scoredPoint(scoredTeam: game.activePoint.scoredTeam)
+            self.changeButtonLabel()
             return
         }
         // フォルトフラグ真偽逆転

@@ -19,7 +19,7 @@ class MatchScreenOperationsParentPresenter{
         delegate?.point2BtnParent.setTitle(dispPoint2, for: .normal)
     }
     
-    func addSetCount(serverName:String){
+    func addSetCount(score:Score){
         // stackViewにnewViewを追加する
         delegate?.team1StackViewParent.addArrangedSubview(createStackViewCell())
         delegate?.team2StackViewParent.addArrangedSubview(createStackViewCell2())

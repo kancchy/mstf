@@ -24,6 +24,14 @@ class MatchParentController: UIViewController {
     
     var team1StackViewParent: UIStackView!
     var team2StackViewParent: UIStackView!
+    
+    var leftGameNumParent: UILabel!
+    var rightGameNumParent: UILabel!
+    var leftSetNumParent: UILabel!
+    var rightSetNumParent: UILabel!
+    
+    var leftGameLineParent: UIStackView!
+    var rightGameLineParent: UIStackView!
 
     var startDate = "";
     var inputPlayerName1 = "";
@@ -45,12 +53,7 @@ class MatchParentController: UIViewController {
 
         // headerのBackが重ならなくなる
         edgesForExtendedLayout = []
-
-        presenter.delegate = self
-        presenter.screenOperator = MatchScreenOperationsParentPresenter();
-        presenter.screenOperator?.delegate = self
-
-        presenter.startNewSet(serverName:serverTeamName)
+        self.presenterInit();
     }
 
     @IBOutlet weak var dateLabel: UILabel!
@@ -87,5 +90,13 @@ class MatchParentController: UIViewController {
         else{
             return true
         }
+    }
+    
+    func presenterInit() {
+        presenter.delegate = self
+        presenter.screenOperator = MatchScreenOperationsParentPresenter();
+        presenter.screenOperator?.delegate = self
+
+        presenter.startNewSet(serverName:serverTeamName)
     }
 }

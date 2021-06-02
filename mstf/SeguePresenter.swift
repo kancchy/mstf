@@ -50,11 +50,12 @@ class SeguePresenter:DelegateProtocol{
         } else if segue.identifier == "matchKanda" {
             // 遷移先ViewCntrollerの取得
             let nextView = segue.destination as! MatchKandaController;
-            nextView.receivedPlayer1Name = (viewDetailDelegate?.receivedPlayer1Name.description)!
-            nextView.receivedPlayer2Name = (viewDetailDelegate?.receivedPlayer2Name.description)!
-            nextView.receivedPlayer3Name = (viewDetailDelegate?.receivedPlayer3Name.description)!
-            nextView.receivedPlayer4Name = (viewDetailDelegate?.receivedPlayer4Name.description)!
+            nextView.inputPlayerName1 = (viewDetailDelegate?.receivedPlayer1Name.description)!
+            nextView.inputPlayerName2 = (viewDetailDelegate?.receivedPlayer2Name.description)!
+            nextView.inputPlayerName3 = (viewDetailDelegate?.receivedPlayer3Name.description)!
+            nextView.inputPlayerName4 = (viewDetailDelegate?.receivedPlayer4Name.description)!
             nextView.serverTeamName = (viewDetailDelegate?.serverPlayerTeam.description)!
+            nextView.singlesFlag = (viewDetailDelegate?.singlesFlag)!
             nextView.receivedSetCount = (viewDetailDelegate?.playSetCount.description)!
             nextView.receivedGameCOunt = (viewDetailDelegate?.playGameCount.description)!
         } else if segue.identifier == "matchTajiri" {
