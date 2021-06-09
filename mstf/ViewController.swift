@@ -30,7 +30,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // Firebaseレポート用のクラッシュ処理
+        // https://firebase.google.com/docs/crashlytics/test-implementation?platform=ios&authuser=3
+        let button = UIButton(type: .roundedRect)
+        button.frame = CGRect(x: 20, y: 50, width: 100, height: 30)
+        button.setTitle("Crash", for: [])
+        button.addTarget(self, action: #selector(self.crashButtonTapped(_:)), for: .touchUpInside)
+        view.addSubview(button)
+        
         present.delegate = self
+    }
+    
+    @IBAction func crashButtonTapped(_ sender: AnyObject) {
+        fatalError("Illegal state")
     }
     
     @IBOutlet weak var player1: UITextField!
