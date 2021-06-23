@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		33E8D89A1F295BBDE9887B26 /* Pods_mstf_mstfUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED1354F25CE58FF0758993B /* Pods_mstf_mstfUITests.framework */; };
-		54A78B222670F96300768879 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54A78B212670F96300768879 /* GoogleService-Info.plist */; };
 		54C30B7625CABBC900F61D37 /* MatchTajiri.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C30B7525CABBC900F61D37 /* MatchTajiri.storyboard */; };
 		54C30B7B25CABCE700F61D37 /* MatchTajiriController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C30B7A25CABCE700F61D37 /* MatchTajiriController.swift */; };
 		54C30B8025CABEA900F61D37 /* MatchKandaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C30B7F25CABEA900F61D37 /* MatchKandaController.swift */; };
@@ -23,6 +22,7 @@
 		753F2E04260B6A22004BF21C /* MatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753F2E03260B6A22004BF21C /* MatchPresenter.swift */; };
 		75882E6825EFA38C00BE4DAC /* MatchYamaguchi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75882E6725EFA38C00BE4DAC /* MatchYamaguchi.storyboard */; };
 		75882E6D25EFA3CC00BE4DAC /* MatchYamaguchiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75882E6C25EFA3CC00BE4DAC /* MatchYamaguchiController.swift */; };
+		75A6CDC7267A2D31004A464E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A6CDC6267A2D31004A464E /* GoogleService-Info.plist */; };
 		AE510590265E8B2D00E1CDCE /* MatchScreenOperationsParentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51058F265E8B2D00E1CDCE /* MatchScreenOperationsParentPresenter.swift */; };
 		AE5105922667619C00E1CDCE /* VerticalMatchScreenOperationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5105912667619C00E1CDCE /* VerticalMatchScreenOperationsPresenter.swift */; };
 		AE66A7C025B83C11002891F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66A7BF25B83C11002891F4 /* AppDelegate.swift */; };
@@ -65,7 +65,6 @@
 
 /* Begin PBXFileReference section */
 		47EB21E5177FB7B133F17C53 /* Pods_mstfTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mstfTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		54A78B212670F96300768879 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		54C30B7525CABBC900F61D37 /* MatchTajiri.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchTajiri.storyboard; sourceTree = "<group>"; };
 		54C30B7A25CABCE700F61D37 /* MatchTajiriController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTajiriController.swift; sourceTree = "<group>"; };
 		54C30B7F25CABEA900F61D37 /* MatchKandaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchKandaController.swift; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		753F2E03260B6A22004BF21C /* MatchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPresenter.swift; sourceTree = "<group>"; };
 		75882E6725EFA38C00BE4DAC /* MatchYamaguchi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchYamaguchi.storyboard; sourceTree = "<group>"; };
 		75882E6C25EFA3CC00BE4DAC /* MatchYamaguchiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchYamaguchiController.swift; sourceTree = "<group>"; };
+		75A6CDC6267A2D31004A464E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A94CD54AB1AB3C1AEB8AAA69 /* Pods-mstfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mstfTests.release.xcconfig"; path = "Target Support Files/Pods-mstfTests/Pods-mstfTests.release.xcconfig"; sourceTree = "<group>"; };
 		AE51058F265E8B2D00E1CDCE /* MatchScreenOperationsParentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchScreenOperationsParentPresenter.swift; sourceTree = "<group>"; };
 		AE5105912667619C00E1CDCE /* VerticalMatchScreenOperationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalMatchScreenOperationsPresenter.swift; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		AE66A7BE25B83C11002891F4 /* mstf */ = {
 			isa = PBXGroup;
 			children = (
-				54A78B212670F96300768879 /* GoogleService-Info.plist */,
+				75A6CDC6267A2D31004A464E /* GoogleService-Info.plist */,
 				7520139025F8D6D00027B482 /* Util */,
 				AEA3D20125F8CD9D00E00931 /* Domain */,
 				54DB7C6B25E6600D001330CE /* Presenter */,
@@ -388,12 +388,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				54C30B8525CABEDB00F61D37 /* MatchKanda.storyboard in Resources */,
-				54A78B222670F96300768879 /* GoogleService-Info.plist in Resources */,
 				AE66A7CC25B83C12002891F4 /* LaunchScreen.storyboard in Resources */,
 				54C30B7625CABBC900F61D37 /* MatchTajiri.storyboard in Resources */,
 				75882E6825EFA38C00BE4DAC /* MatchYamaguchi.storyboard in Resources */,
 				AE66A7C925B83C12002891F4 /* Assets.xcassets in Resources */,
 				AE66A7C725B83C11002891F4 /* Main.storyboard in Resources */,
+				75A6CDC7267A2D31004A464E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +657,7 @@
 				DEVELOPMENT_TEAM = TGARAF5G5U;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -719,6 +720,7 @@
 				DEVELOPMENT_TEAM = TGARAF5G5U;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -746,7 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
+				"EXCLUDED_ARCHS[sdk=*]" = "";
 				INFOPLIST_FILE = mstf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -767,7 +769,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
+				"EXCLUDED_ARCHS[sdk=*]" = "";
 				INFOPLIST_FILE = mstf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
