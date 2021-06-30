@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tZr-mu-pHA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tZr-mu-pHA">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -85,14 +85,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="チーム1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0d-O2-4TX">
-                                <rect key="frame" x="98" y="81" width="95" height="32"/>
+                                <rect key="frame" x="98" y="46" width="95" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="チーム2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izo-Mg-F3D">
-                                <rect key="frame" x="603" y="81" width="62" height="32"/>
+                                <rect key="frame" x="98" y="95" width="62" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -135,6 +135,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSH-ai-iX3">
+                                <rect key="frame" x="597" y="33" width="42" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ec-qC-CUm">
+                                <rect key="frame" x="597" y="95" width="42" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hcg-Sj-r1a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -149,12 +163,14 @@
                         <outlet property="clearBtn" destination="8dF-BT-1g5" id="0uV-oI-vDB"/>
                         <outlet property="fault1Btn" destination="clM-OI-DRa" id="YQR-gL-05K"/>
                         <outlet property="fault2Btn" destination="F5Q-5l-Wjx" id="cXI-fy-weK"/>
+                        <outlet property="leftSetNum" destination="VSH-ai-iX3" id="Cre-ff-Dnv"/>
                         <outlet property="player1Name" destination="PRd-Qy-tOb" id="k1d-03-pH2"/>
                         <outlet property="player2Name" destination="sdW-bs-SMn" id="Bws-bn-eUP"/>
                         <outlet property="player3Name" destination="L7k-Nd-l0p" id="Gy6-Fs-BNl"/>
                         <outlet property="player4Name" destination="y6p-hk-RpB" id="Rqp-Q6-edj"/>
                         <outlet property="point1Btn" destination="RbO-sk-DFT" id="9lZ-Sg-v9c"/>
                         <outlet property="point2Btn" destination="eDU-HA-zjV" id="I7x-iB-aQE"/>
+                        <outlet property="rightSetNum" destination="9Ec-qC-CUm" id="2nv-mR-rpG"/>
                         <outlet property="team1Name" destination="a0d-O2-4TX" id="q1G-Uv-ANZ"/>
                         <outlet property="team1StackView" destination="rgw-zC-ivM" id="KHK-92-bAM"/>
                         <outlet property="team2Name" destination="izo-Mg-F3D" id="JOg-Qf-64d"/>
