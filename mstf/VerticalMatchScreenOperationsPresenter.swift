@@ -14,9 +14,9 @@ class VerticalMatchScreenOperationsPresenter : MatchScreenOperationsParentPresen
         let dispPoint1 = game.cnvPoint(point:game.gamePointCountTeamA)
         let dispPoint2 = game.cnvPoint(point:game.gamePointCountTeamB)
         // stackViewにnewViewを追加する
-        delegate?.leftGameLineParent.addArrangedSubview(createStackViewCell(convertedPoint: dispPoint1))
+        delegate?.leftGameLineParent.insertArrangedSubview(createStackViewCell(convertedPoint: dispPoint1), at: 0)
 
-        delegate?.rightGameLineParent.addArrangedSubview(createStackViewCell2(convertedPoint: dispPoint2))
+        delegate?.rightGameLineParent.insertArrangedSubview(createStackViewCell2(convertedPoint: dispPoint2), at: 0)
     }
     
     override func addSetCount(score:Score) {
