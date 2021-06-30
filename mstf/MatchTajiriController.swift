@@ -22,6 +22,9 @@ class MatchTajiriController: MatchParentController {
     //var inputPlayerName1 = "";
     //var inputPlayerName2 = "";
     
+    @IBOutlet weak var leftSetNum: UILabel!
+    @IBOutlet weak var rightSetNum: UILabel!
+    
     override func viewDidLoad() {
         player1Name.text = inputPlayerName1;
         player2Name.text = inputPlayerName2;
@@ -52,6 +55,9 @@ class MatchTajiriController: MatchParentController {
         super.team2NameParent = self.team2Name
         super.team1StackViewParent = UIStackView()
         super.team2StackViewParent = UIStackView()
+        
+        super.leftSetNumParent = self.leftSetNum
+        super.rightSetNumParent = self.rightSetNum
         
         super.viewDidLoad()
     }

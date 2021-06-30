@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p16-6p-xWH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p16-6p-xWH">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,7 +75,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vmu-E4-Mlc">
-                                <rect key="frame" x="471" y="15" width="200" height="110"/>
+                                <rect key="frame" x="471" y="15" width="41.5" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdo-mr-aK6">
@@ -167,6 +167,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sx-2J-6DA">
+                                <rect key="frame" x="492" y="56" width="42" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSd-Jt-q0Z">
+                                <rect key="frame" x="492" y="84" width="42" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AhV-nW-ysX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -175,10 +189,12 @@
                         <outlet property="clearBtn" destination="gx4-un-QRP" id="1dm-7S-zwN"/>
                         <outlet property="fault1Btn" destination="o4W-vE-puJ" id="S3I-22-JYg"/>
                         <outlet property="fault2Btn" destination="wZe-kq-R44" id="bys-Ex-zW6"/>
+                        <outlet property="leftSetNum" destination="7sx-2J-6DA" id="AL8-qv-GA9"/>
                         <outlet property="player1Name" destination="mf4-rP-fxo" id="dc0-Pb-DhC"/>
                         <outlet property="player2Name" destination="k6M-bk-Hii" id="Dvh-Ah-RhR"/>
                         <outlet property="point1Btn" destination="qtv-TT-aR1" id="bxY-Uh-IKJ"/>
                         <outlet property="point2Btn" destination="7se-11-rgt" id="dDA-M4-M8w"/>
+                        <outlet property="rightSetNum" destination="tSd-Jt-q0Z" id="RVr-wb-2sd"/>
                         <outlet property="team1Name" destination="F4j-Gn-EtK" id="PFz-C6-a7R"/>
                         <outlet property="team2Name" destination="qYc-rt-pbf" id="Xzt-Oz-a4l"/>
                     </connections>

@@ -23,6 +23,9 @@ class MatchScreenOperationsParentPresenter{
         // stackViewにnewViewを追加する
         delegate?.team1StackViewParent.addArrangedSubview(createStackViewCell())
         delegate?.team2StackViewParent.addArrangedSubview(createStackViewCell2())
+        
+        delegate?.leftSetNumParent.text = "\(score.numberOfSetsForTeamA)"
+        delegate?.rightSetNumParent.text = "\(score.numberOfSetsForTeamB)"
     }
     
     func changeServerTeamBackgroundColor(serverName:String){

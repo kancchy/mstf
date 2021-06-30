@@ -24,6 +24,9 @@ class MatchYamaguchiController: MatchParentController {
     
     @IBOutlet weak var team1StackView: UIStackView!
     @IBOutlet weak var team2StackView: UIStackView!
+    
+    @IBOutlet weak var leftSetNum: UILabel!
+    @IBOutlet weak var rightSetNum: UILabel!
 
     /// 作成したViewのカウンター
     var count:Int = 0
@@ -51,6 +54,8 @@ class MatchYamaguchiController: MatchParentController {
         super.team2NameParent = self.team2Name
         super.team1StackViewParent = self.team1StackView
         super.team2StackViewParent = self.team2StackView
+        super.leftSetNumParent = self.leftSetNum
+        super.rightSetNumParent = self.rightSetNum
 
         super.viewDidLoad()
         // Do any additional setup after loading the view.
