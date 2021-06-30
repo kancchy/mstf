@@ -44,6 +44,19 @@ class ViewController: UIViewController {
     @IBAction func crashButtonTapped(_ sender: AnyObject) {
         fatalError("Illegal state")
     }
+
+    @IBAction func onDidEndOnExitPlayer1(_ sender: UITextField) {
+    }
+    
+    @IBAction func onDidEndOnExitPlayer2(_ sender: UITextField) {
+    }
+    
+    @IBAction func onDidEndOnExitPlayer3(_ sender: UITextField) {
+    }
+    
+    @IBAction func onDidEndOnExitPlayer4(_ sender: UITextField) {
+    }
+    
     
     @IBOutlet weak var player1: UITextField!
     @IBOutlet weak var player2: UITextField!
