@@ -66,7 +66,7 @@ class VerticalMatchScreenOperationsPresenter : MatchScreenOperationsParentPresen
         let label = UILabel()
         newView.addSubview(label);
         // 背景を緑に設定
-        newView.backgroundColor = UIColor.green
+        newView.backgroundColor = UIColor.white
         // 枠線を設定
         newView.layer.borderColor = UIColor.black.cgColor
         newView.layer.borderWidth = 1.0
@@ -75,7 +75,7 @@ class VerticalMatchScreenOperationsPresenter : MatchScreenOperationsParentPresen
         label.sizeToFit()
         label.textColor = UIColor.black
         // 新規Viewに height=100 の制約を追加 ←【超重要】
-        newView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        newView.heightAnchor.constraint(equalToConstant: 60.0).isActive = true
         newView.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
         newView.translatesAutoresizingMaskIntoConstraints = false
         return newView;
@@ -87,7 +87,7 @@ class VerticalMatchScreenOperationsPresenter : MatchScreenOperationsParentPresen
         let label = UILabel()
         newView.addSubview(label);
         // 背景を緑に設定
-        newView.backgroundColor = UIColor.yellow
+        newView.backgroundColor = UIColor.white
         // 枠線を設定
         newView.layer.borderColor = UIColor.black.cgColor
         newView.layer.borderWidth = 1.0
@@ -96,7 +96,7 @@ class VerticalMatchScreenOperationsPresenter : MatchScreenOperationsParentPresen
         label.sizeToFit()
         label.textColor = UIColor.black
         // 新規Viewに height=100 の制約を追加 ←【超重要】
-        newView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        newView.heightAnchor.constraint(equalToConstant: 60.0).isActive = true
         newView.translatesAutoresizingMaskIntoConstraints = false
         return newView;
     }
