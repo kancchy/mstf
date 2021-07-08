@@ -151,7 +151,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hcg-Sj-r1a"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.81934235239999997" green="0.98375080540000004" blue="0.63818375569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="hcg-Sj-r1a" firstAttribute="trailing" secondItem="YpX-e4-Dwe" secondAttribute="trailing" constant="268" id="AKZ-Tn-o8F"/>
                             <constraint firstItem="YpX-e4-Dwe" firstAttribute="top" secondItem="hcg-Sj-r1a" secondAttribute="top" constant="33" id="Hz5-2i-0wu"/>
@@ -183,9 +183,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

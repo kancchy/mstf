@@ -18,9 +18,6 @@ class MatchTajiriController: MatchParentController {
     @IBOutlet weak var fault1Btn: UIButton!
     @IBOutlet weak var fault2Btn: UIButton!
     @IBOutlet weak var clearBtn: UIButton!
-    //var startDate = "";
-    //var inputPlayerName1 = "";
-    //var inputPlayerName2 = "";
     
     @IBOutlet weak var leftSetNum: UILabel!
     @IBOutlet weak var rightSetNum: UILabel!
@@ -28,17 +25,7 @@ class MatchTajiriController: MatchParentController {
     override func viewDidLoad() {
         player1Name.text = inputPlayerName1;
         player2Name.text = inputPlayerName2;
-        
-        // 背景色
-        self.point1Btn.backgroundColor = UIColor.yellow
-        self.point2Btn.backgroundColor = UIColor.yellow
-        self.fault1Btn.backgroundColor = UIColor.red
-        self.fault2Btn.backgroundColor = UIColor.red
-        self.clearBtn.backgroundColor = UIColor.systemPink
-        
-        // 角丸の程度を指定
-        self.point1Btn.layer.cornerRadius = 20.0
-        self.point2Btn.layer.cornerRadius = 20.0
+
         print(supportedInterfaceOrientations)
         
         super.player1NameParent = self.player1Name
@@ -55,10 +42,9 @@ class MatchTajiriController: MatchParentController {
         super.team2NameParent = self.team2Name
         super.team1StackViewParent = UIStackView()
         super.team2StackViewParent = UIStackView()
-        
         super.leftSetNumParent = self.leftSetNum
         super.rightSetNumParent = self.rightSetNum
-        
+
         super.viewDidLoad()
     }
     
