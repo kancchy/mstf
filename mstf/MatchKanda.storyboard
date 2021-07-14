@@ -161,7 +161,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4WJ-6y-wQl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.81934235239999997" green="0.98375080540000004" blue="0.63818375569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="SF9-fT-KNP" firstAttribute="leading" secondItem="4WJ-6y-wQl" secondAttribute="leading" constant="20" id="80d-rk-aWT"/>
                             <constraint firstItem="4WJ-6y-wQl" firstAttribute="trailing" secondItem="Wat-g9-KlL" secondAttribute="trailing" constant="20" id="83L-c5-6Ue"/>
@@ -209,9 +209,6 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

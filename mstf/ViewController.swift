@@ -39,6 +39,24 @@ class ViewController: UIViewController {
         view.addSubview(button)
         
         present.delegate = self
+        
+        // 枠線のカラーと幅を指定
+        player1.layer.borderColor = UIColor.gray.cgColor
+        player1.layer.borderWidth = 1.0
+
+        player2.layer.borderColor = UIColor.gray.cgColor
+        player2.layer.borderWidth = 1.0
+        
+        player3.layer.borderColor = UIColor.gray.cgColor
+        player3.layer.borderWidth = 1.0
+        
+        player4.layer.borderColor = UIColor.gray.cgColor
+        player4.layer.borderWidth = 1.0
+        
+        makeMatch.layer.borderColor = UIColor(red: 46/255, green: 139/255, blue: 87/255, alpha: 1).cgColor
+        makeMatch.layer.borderWidth = 2.0
+
+
     }
     
     @IBAction func crashButtonTapped(_ sender: AnyObject) {
