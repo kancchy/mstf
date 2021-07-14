@@ -56,7 +56,6 @@ class ViewController: UIViewController {
         makeMatch.layer.borderColor = UIColor(red: 46/255, green: 139/255, blue: 87/255, alpha: 1).cgColor
         makeMatch.layer.borderWidth = 2.0
 
-
     }
     
     @IBAction func crashButtonTapped(_ sender: AnyObject) {

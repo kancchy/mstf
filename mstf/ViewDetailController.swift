@@ -19,6 +19,8 @@ class ViewDetailController: UIViewController , UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var serverTeam1: UIView!
     @IBOutlet weak var serverTeam2: UIView!
+    @IBOutlet weak var playerNameArea: UIView!
+    @IBOutlet weak var gameSelectArea: UIView!
     
     // 前画面から引き継いだデータ
     var receivedPlayer1Name = "";
@@ -77,18 +79,20 @@ class ViewDetailController: UIViewController , UIPickerViewDelegate, UIPickerVie
     }
 
     @IBAction func tapServer1(_ sender: Any) {
-        serverTeam1.backgroundColor = UIColor.red
-        serverTeam2.backgroundColor = UIColor.clear
+        serverTeam1.layer.borderColor = UIColor.red.cgColor
+        serverTeam1.layer.borderWidth = 3.0
+        serverTeam1.layer.cornerRadius = 10
+        serverTeam2.layer.borderWidth = 0
         serverPlayerTeam = "A"
     }
     
     @IBAction func tapServer2(_ sender: Any) {
-        serverTeam1.backgroundColor = UIColor.clear
-        serverTeam2.backgroundColor = UIColor.red
+        serverTeam2.layer.borderColor = UIColor.red.cgColor
+        serverTeam2.layer.borderWidth = 3.0
+        serverTeam2.layer.cornerRadius = 10
+        serverTeam1.layer.borderWidth = 0
         serverPlayerTeam = "B"
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,43 +119,14 @@ class ViewDetailController: UIViewController , UIPickerViewDelegate, UIPickerVie
             playerNameOutput4.setTitle(receivedPlayer4Name, for: .normal)
             singlesFlag = false;
         }
+        
+        playerNameArea.layer.borderColor = UIColor(red: 46/255, green: 139/255, blue: 87/255, alpha: 1).cgColor
+        playerNameArea.layer.borderWidth = 1.0
+        
+        gameSelectArea.layer.borderColor = UIColor(red: 46/255, green: 139/255, blue: 87/255, alpha: 1).cgColor
+        gameSelectArea.layer.borderWidth = 1.0
     }
-    
-    @IBAction func pushButton1(_ sender: Any) {
-        clearColor()
-        // プレイヤー1をサーバーに
-        serverPlayerName = "1"
-        playerNameOutput1.backgroundColor = UIColor.red
-    }
-    
-    @IBAction func pushButton2(_ sender: Any) {
-        clearColor()
-        // プレイヤー2をサーバーに
-        serverPlayerName = "2"
-        playerNameOutput2.backgroundColor = UIColor.red
-    }
-    
-    @IBAction func pushButton3(_ sender: Any) {
-        clearColor()
-        // プレイヤー3をサーバーに
-        serverPlayerName = "3"
-        playerNameOutput3.backgroundColor = UIColor.red
-    }
-    
-    @IBAction func pushButton4(_ sender: Any) {
-        clearColor()
-        // プレイヤー4をサーバーに
-        serverPlayerName = "4"
-        playerNameOutput4.backgroundColor = UIColor.red
-    }
-    
-    func clearColor(){
-        playerNameOutput1.backgroundColor = UIColor.white
-        playerNameOutput2.backgroundColor = UIColor.white
-        playerNameOutput3.backgroundColor = UIColor.white
-        playerNameOutput4.backgroundColor = UIColor.white
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // データの受け渡し
         present.dataSet(segue: segue)
