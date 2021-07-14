@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="プレイヤー3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7k-Nd-l0p">
-                                <rect key="frame" x="143" y="248" width="97" height="32"/>
+                                <rect key="frame" x="97" y="252" width="97" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -38,32 +38,29 @@
                                     <action selector="clearGamePoint:" destination="tZr-mu-pHA" eventType="touchUpInside" id="h7R-MR-kA6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-sk-DFT">
-                                <rect key="frame" x="282" y="201" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-HA-zjV">
+                                <rect key="frame" x="456" y="201" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <state key="normal" title="0">
-                                    <color key="titleColor" name="AccentColor"/>
-                                </state>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="0"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="pushPoint1:" destination="tZr-mu-pHA" eventType="touchUpInside" id="jiG-uJ-cjk"/>
+                                    <action selector="pushPoint2:" destination="tZr-mu-pHA" eventType="touchUpInside" id="82B-uQ-1c1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clM-OI-DRa">
-                                <rect key="frame" x="248" y="323" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clM-OI-DRa">
+                                <rect key="frame" x="257" y="323" width="68" height="30"/>
                                 <state key="normal" title="フォルト1"/>
                                 <connections>
                                     <action selector="pushFault1:" destination="tZr-mu-pHA" eventType="touchUpInside" id="5bG-Fl-Ixu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5Q-5l-Wjx">
-                                <rect key="frame" x="548" y="323" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5Q-5l-Wjx">
+                                <rect key="frame" x="571" y="323" width="71" height="30"/>
                                 <state key="normal" title="フォルト2"/>
                                 <connections>
                                     <action selector="pushFault2:" destination="tZr-mu-pHA" eventType="touchUpInside" id="K3L-DI-zvt"/>
@@ -77,7 +74,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="プレイヤー1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRd-Qy-tOb">
-                                <rect key="frame" x="144" y="213" width="95" height="32"/>
+                                <rect key="frame" x="99" y="212" width="95" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -134,18 +131,21 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-HA-zjV">
-                                <rect key="frame" x="456" y="201" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-sk-DFT">
+                                <rect key="frame" x="211" y="201" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <state key="normal" title="0"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="pushPoint2:" destination="tZr-mu-pHA" eventType="touchUpInside" id="82B-uQ-1c1"/>
+                                    <action selector="pushPoint1:" destination="tZr-mu-pHA" eventType="touchUpInside" id="jiG-uJ-cjk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -153,9 +153,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BU7-Ih-coI" firstAttribute="centerX" secondItem="pgP-87-JxJ" secondAttribute="centerX" id="0Xh-BK-9WF"/>
+                            <constraint firstItem="8dF-BT-1g5" firstAttribute="leading" secondItem="clM-OI-DRa" secondAttribute="trailing" constant="100" id="7NX-CY-4op"/>
+                            <constraint firstItem="8dF-BT-1g5" firstAttribute="centerX" secondItem="pgP-87-JxJ" secondAttribute="centerX" id="IXh-q9-jzE"/>
                             <constraint firstItem="8dF-BT-1g5" firstAttribute="centerX" secondItem="BU7-Ih-coI" secondAttribute="centerX" id="NAq-vM-vtU"/>
                             <constraint firstItem="hcg-Sj-r1a" firstAttribute="bottom" secondItem="F5Q-5l-Wjx" secondAttribute="bottom" constant="40" id="dex-kd-5fe"/>
                             <constraint firstItem="hcg-Sj-r1a" firstAttribute="bottom" secondItem="8dF-BT-1g5" secondAttribute="bottom" constant="40" id="j1n-o5-StB"/>
+                            <constraint firstItem="F5Q-5l-Wjx" firstAttribute="leading" secondItem="8dF-BT-1g5" secondAttribute="trailing" constant="100" id="kZu-SL-r1a"/>
                             <constraint firstItem="hcg-Sj-r1a" firstAttribute="bottom" secondItem="clM-OI-DRa" secondAttribute="bottom" constant="40" id="zIe-Lw-H6i"/>
                         </constraints>
                     </view>
